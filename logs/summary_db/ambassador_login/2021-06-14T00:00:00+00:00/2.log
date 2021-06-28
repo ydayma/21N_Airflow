@@ -1,0 +1,29 @@
+[2021-06-15 18:01:31,771] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_login 2021-06-14T00:00:00+00:00 [queued]>
+[2021-06-15 18:01:31,944] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_login 2021-06-14T00:00:00+00:00 [queued]>
+[2021-06-15 18:01:31,945] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-15 18:01:31,945] {taskinstance.py:1068} INFO - Starting attempt 2 of 3
+[2021-06-15 18:01:31,945] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-15 18:01:32,127] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): ambassador_login> on 2021-06-14T00:00:00+00:00
+[2021-06-15 18:01:32,150] {standard_task_runner.py:52} INFO - Started process 1501 to run task
+[2021-06-15 18:01:32,166] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'ambassador_login', '2021-06-14T00:00:00+00:00', '--job-id', '155', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpx1m_i95x', '--error-file', '/tmp/tmp4f7p27sg']
+[2021-06-15 18:01:32,167] {standard_task_runner.py:77} INFO - Job 155: Subtask ambassador_login
+[2021-06-15 18:01:32,440] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.ambassador_login 2021-06-14T00:00:00+00:00 [running]> on host bb8bb196dd92
+[2021-06-15 18:01:32,889] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=ambassador_login
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-14T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-14T00:00:00+00:00
+[2021-06-15 18:01:32,894] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-15 18:01:35,298] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-15 18:01:37,191] {logging_mixin.py:104} WARNING - /home/***/.local/lib/python3.6/site-packages/pandas/io/sql.py:1423 UserWarning: The provided table name '21N_ambassador_login' is not found exactly as such in the database after writing the table, possibly due to case sensitivity issues. Consider using lower case table names.
+[2021-06-15 18:01:37,191] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-15 18:01:37,192] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-15 18:01:37,311] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=ambassador_login, execution_date=20210614T000000, start_date=20210615T180131, end_date=20210615T180137
+[2021-06-15 18:01:37,533] {local_task_job.py:197} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2021-06-15 18:01:37,570] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-15 18:01:37,536] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 1501
+[2021-06-15 18:01:37,583] {taskinstance.py:1264} ERROR - Received SIGTERM. Terminating subprocesses.
+[2021-06-15 18:01:37,704] {process_utils.py:66} INFO - Process psutil.Process(pid=1501, status='terminated', exitcode=1, started='18:01:31') (1501) terminated with exit code 1

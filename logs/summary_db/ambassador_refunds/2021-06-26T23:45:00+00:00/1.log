@@ -1,0 +1,50 @@
+[2021-06-28 15:20:01,963] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_refunds 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:20:02,143] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_refunds 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:20:02,143] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:20:02,143] {taskinstance.py:1068} INFO - Starting attempt 1 of 4
+[2021-06-28 15:20:02,144] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:20:02,311] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): ambassador_refunds> on 2021-06-26T23:45:00+00:00
+[2021-06-28 15:20:02,416] {standard_task_runner.py:52} INFO - Started process 305 to run task
+[2021-06-28 15:20:02,677] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'ambassador_refunds', '2021-06-26T23:45:00+00:00', '--job-id', '279', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/analytics_summary.py', '--cfg-path', '/tmp/tmpmpczohxs', '--error-file', '/tmp/tmpnjwz85rx']
+[2021-06-28 15:20:02,678] {standard_task_runner.py:77} INFO - Job 279: Subtask ambassador_refunds
+[2021-06-28 15:20:03,173] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.ambassador_refunds 2021-06-26T23:45:00+00:00 [running]> on host 32c9461fc328
+[2021-06-28 15:20:03,573] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=ambassador_refunds
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-26T23:45:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-26T23:45:00+00:00
+[2021-06-28 15:20:03,574] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-28 15:20:09,534] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-28 15:20:11,669] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-28 15:20:11,670] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-28 15:20:11,731] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=ambassador_refunds, execution_date=20210626T234500, start_date=20210628T152001, end_date=20210628T152011
+[2021-06-28 15:20:12,065] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-28 15:20:12,139] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-06-28 15:38:41,257] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_refunds 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:38:41,505] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_refunds 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:38:41,505] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:38:41,505] {taskinstance.py:1068} INFO - Starting attempt 1 of 4
+[2021-06-28 15:38:41,506] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:38:41,535] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): ambassador_refunds> on 2021-06-26T23:45:00+00:00
+[2021-06-28 15:38:41,587] {standard_task_runner.py:52} INFO - Started process 330 to run task
+[2021-06-28 15:38:41,597] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'ambassador_refunds', '2021-06-26T23:45:00+00:00', '--job-id', '306', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/analytics_summary.py', '--cfg-path', '/tmp/tmpfi7dk9n4', '--error-file', '/tmp/tmprhx6g22s']
+[2021-06-28 15:38:41,604] {standard_task_runner.py:77} INFO - Job 306: Subtask ambassador_refunds
+[2021-06-28 15:38:41,909] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.ambassador_refunds 2021-06-26T23:45:00+00:00 [running]> on host 32c9461fc328
+[2021-06-28 15:38:42,233] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=ambassador_refunds
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-26T23:45:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-26T23:45:00+00:00
+[2021-06-28 15:38:42,234] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-28 15:39:26,199] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-28 15:39:27,894] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-28 15:39:27,894] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-28 15:39:27,931] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=ambassador_refunds, execution_date=20210626T234500, start_date=20210628T153841, end_date=20210628T153927
+[2021-06-28 15:39:27,981] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-28 15:39:28,037] {local_task_job.py:151} INFO - Task exited with return code 0

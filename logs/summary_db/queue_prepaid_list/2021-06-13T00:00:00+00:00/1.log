@@ -1,0 +1,149 @@
+[2021-06-14 12:49:16,957] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_prepaid_list 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:49:17,158] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_prepaid_list 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:49:17,159] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:49:17,159] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 12:49:17,160] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:49:17,329] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): queue_prepaid_list> on 2021-06-13T00:00:00+00:00
+[2021-06-14 12:49:17,395] {standard_task_runner.py:52} INFO - Started process 410 to run task
+[2021-06-14 12:49:17,438] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'queue_prepaid_list', '2021-06-13T00:00:00+00:00', '--job-id', '52', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmp4hg7fhsy', '--error-file', '/tmp/tmpj0mqadfo']
+[2021-06-14 12:49:17,443] {standard_task_runner.py:77} INFO - Job 52: Subtask queue_prepaid_list
+[2021-06-14 12:49:17,882] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.queue_prepaid_list 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 12:49:18,232] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=queue_prepaid_list
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 12:49:18,234] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 12:49:42,298] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 12:49:42,429] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 148, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 236, in executemany
+    self._get_db().encoding,
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 266, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1054, "Unknown column 'deduction_type' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 352, in queue_prepaid_list
+    index=False)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/core/generic.py", line 2615, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 598, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1406, in to_sql
+    raise err
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1398, in to_sql
+    table.insert(chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 830, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 747, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 148, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 236, in executemany
+    self._get_db().encoding,
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 266, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (1054, "Unknown column 'deduction_type' in 'field list'")
+[SQL: INSERT INTO `21north`.`21N_queue_prepaid_list` (id, creationdatetime, queueid, servicecentre_id, amount, balance, payment_type, reason, deduction_type) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)]
+[parameters: ((221678, datetime.datetime(2021, 6, 13, 18, 27, 29), 1635052, 1696, -455.48, 0, 6, None, 1), (221679, datetime.datetime(2021, 6, 13, 18, 35, 52), 1635053, 1696, -455.48, 0, 6, None, 1), (221680, datetime.datetime(2021, 6, 13, 18, 44, 23), 1635055, 1626, -147.5, 0, 6, None, 1), (221681, datetime.datetime(2021, 6, 13, 18, 51, 16), 1635058, 2048, -206.5, 0, 7, None, 1), (221682, datetime.datetime(2021, 6, 13, 18, 57, 16), 1635060, 1755, -649.0, 0, 6, None, 1), (221683, datetime.datetime(2021, 6, 13, 19, 3, 59), 1635064, 2048, -206.5, 0, 7, None, 1), (221684, datetime.datetime(2021, 6, 13, 19, 4, 7), 1635065, 1626, -354.0, 0, 6, None, 1), (221685, datetime.datetime(2021, 6, 13, 19, 7, 20), 1635067, 1626, -420.21, 0, 6, None, 1)  ... displaying 10 of 307 total bound parameter sets ...  (221983, datetime.datetime(2021, 6, 14, 14, 35, 2), 1635977, 2100, -354.0, 0, 6, None, 1), (221984, datetime.datetime(2021, 6, 14, 14, 35, 10), 1635979, 1432, -497.96, 0, 6, None, 1))]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+[2021-06-14 12:49:42,437] {taskinstance.py:1531} INFO - Marking task as UP_FOR_RETRY. dag_id=summary_db, task_id=queue_prepaid_list, execution_date=20210613T000000, start_date=20210614T124916, end_date=20210614T124942
+[2021-06-14 12:49:42,485] {local_task_job.py:151} INFO - Task exited with return code 1
+[2021-06-14 15:28:28,991] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_prepaid_list 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 15:28:29,610] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_prepaid_list 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 15:28:29,619] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 15:28:29,623] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 15:28:29,623] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 15:28:29,776] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): queue_prepaid_list> on 2021-06-13T00:00:00+00:00
+[2021-06-14 15:28:29,874] {standard_task_runner.py:52} INFO - Started process 827 to run task
+[2021-06-14 15:28:29,930] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'queue_prepaid_list', '2021-06-13T00:00:00+00:00', '--job-id', '86', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmphpbfs27c', '--error-file', '/tmp/tmpq1t3uqlk']
+[2021-06-14 15:28:29,956] {standard_task_runner.py:77} INFO - Job 86: Subtask queue_prepaid_list
+[2021-06-14 15:28:30,718] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.queue_prepaid_list 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 15:28:31,674] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=queue_prepaid_list
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 15:28:31,685] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 15:28:56,084] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 15:28:56,820] {logging_mixin.py:104} WARNING - /home/***/.local/lib/python3.6/site-packages/pandas/io/sql.py:1423 UserWarning: The provided table name '21N_queue_prepaid_list' is not found exactly as such in the database after writing the table, possibly due to case sensitivity issues. Consider using lower case table names.
+[2021-06-14 15:28:56,821] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-14 15:28:56,824] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-14 15:28:56,876] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=queue_prepaid_list, execution_date=20210613T000000, start_date=20210614T152829, end_date=20210614T152856
+[2021-06-14 15:28:56,979] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-14 15:28:57,008] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-06-14 18:34:31,125] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_prepaid_list 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 18:34:31,243] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_prepaid_list 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 18:34:31,244] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 18:34:31,245] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 18:34:31,246] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 18:34:31,349] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): queue_prepaid_list> on 2021-06-13T00:00:00+00:00
+[2021-06-14 18:34:31,474] {standard_task_runner.py:52} INFO - Started process 299 to run task
+[2021-06-14 18:34:31,502] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'queue_prepaid_list', '2021-06-13T00:00:00+00:00', '--job-id', '119', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmp2tvf8n00', '--error-file', '/tmp/tmptu3q7zpk']
+[2021-06-14 18:34:31,503] {standard_task_runner.py:77} INFO - Job 119: Subtask queue_prepaid_list
+[2021-06-14 18:34:32,094] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.queue_prepaid_list 2021-06-13T00:00:00+00:00 [running]> on host 89c270a4555f
+[2021-06-14 18:34:33,552] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=queue_prepaid_list
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 18:34:33,686] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 18:35:06,679] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 18:35:07,240] {logging_mixin.py:104} WARNING - /home/***/.local/lib/python3.6/site-packages/pandas/io/sql.py:1423 UserWarning: The provided table name '21N_queue_prepaid_list' is not found exactly as such in the database after writing the table, possibly due to case sensitivity issues. Consider using lower case table names.
+[2021-06-14 18:35:07,240] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-14 18:35:07,240] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-14 18:35:07,266] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=queue_prepaid_list, execution_date=20210613T000000, start_date=20210614T183431, end_date=20210614T183507
+[2021-06-14 18:35:07,312] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-14 18:35:07,338] {local_task_job.py:151} INFO - Task exited with return code 0

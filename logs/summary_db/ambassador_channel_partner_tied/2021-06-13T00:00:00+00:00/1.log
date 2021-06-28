@@ -1,0 +1,123 @@
+[2021-06-14 12:48:59,429] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_channel_partner_tied 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:48:59,626] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_channel_partner_tied 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:48:59,626] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:48:59,627] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 12:48:59,627] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:48:59,717] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): ambassador_channel_partner_tied> on 2021-06-13T00:00:00+00:00
+[2021-06-14 12:48:59,789] {standard_task_runner.py:52} INFO - Started process 368 to run task
+[2021-06-14 12:48:59,897] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'ambassador_channel_partner_tied', '2021-06-13T00:00:00+00:00', '--job-id', '34', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpavu2ssen', '--error-file', '/tmp/tmp0vxutzkz']
+[2021-06-14 12:48:59,953] {standard_task_runner.py:77} INFO - Job 34: Subtask ambassador_channel_partner_tied
+[2021-06-14 12:49:00,604] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.ambassador_channel_partner_tied 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 12:49:01,519] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=ambassador_channel_partner_tied
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 12:49:01,522] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 12:49:04,906] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 12:49:05,151] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 68, in ambassador_channel_partner_tied
+    index=False)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/core/generic.py", line 2615, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 598, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1393, in to_sql
+    table.create()
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 725, in create
+    self.pd_sql.drop_table(self.name, self.schema)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1453, in drop_table
+    self.meta.reflect(only=[table_name], schema=schema)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/sql/schema.py", line 4612, in reflect
+    "in %r%s: (%s)" % (bind.engine, s, ", ".join(missing))
+sqlalchemy.exc.InvalidRequestError: Could not reflect: requested table(s) not available in Engine(mysql://root:***@host.docker.internal:3306/21north) schema '21north': (21N_ambassador_channel_partner_tied)
+[2021-06-14 12:49:05,183] {taskinstance.py:1531} INFO - Marking task as UP_FOR_RETRY. dag_id=summary_db, task_id=ambassador_channel_partner_tied, execution_date=20210613T000000, start_date=20210614T124859, end_date=20210614T124905
+[2021-06-14 12:49:05,432] {local_task_job.py:151} INFO - Task exited with return code 1
+[2021-06-14 15:28:05,688] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_channel_partner_tied 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 15:28:05,797] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_channel_partner_tied 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 15:28:05,797] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 15:28:05,797] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 15:28:05,797] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 15:28:05,894] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): ambassador_channel_partner_tied> on 2021-06-13T00:00:00+00:00
+[2021-06-14 15:28:05,985] {standard_task_runner.py:52} INFO - Started process 793 to run task
+[2021-06-14 15:28:06,010] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'ambassador_channel_partner_tied', '2021-06-13T00:00:00+00:00', '--job-id', '73', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmp20edjnj2', '--error-file', '/tmp/tmpxttf9l8v']
+[2021-06-14 15:28:06,011] {standard_task_runner.py:77} INFO - Job 73: Subtask ambassador_channel_partner_tied
+[2021-06-14 15:28:06,829] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.ambassador_channel_partner_tied 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 15:28:07,327] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=ambassador_channel_partner_tied
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 15:28:07,334] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 15:28:09,859] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 15:28:10,168] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 70, in ambassador_channel_partner_tied
+    index=False)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/core/generic.py", line 2615, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 598, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1393, in to_sql
+    table.create()
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 725, in create
+    self.pd_sql.drop_table(self.name, self.schema)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1453, in drop_table
+    self.meta.reflect(only=[table_name], schema=schema)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/sql/schema.py", line 4612, in reflect
+    "in %r%s: (%s)" % (bind.engine, s, ", ".join(missing))
+sqlalchemy.exc.InvalidRequestError: Could not reflect: requested table(s) not available in Engine(mysql://root:***@host.docker.internal:3306/21north) schema '21north': (21N_ambassador_channel_partner_tied)
+[2021-06-14 15:28:10,360] {taskinstance.py:1531} INFO - Marking task as UP_FOR_RETRY. dag_id=summary_db, task_id=ambassador_channel_partner_tied, execution_date=20210613T000000, start_date=20210614T152805, end_date=20210614T152810
+[2021-06-14 15:28:10,598] {local_task_job.py:151} INFO - Task exited with return code 1
+[2021-06-14 18:33:52,802] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_channel_partner_tied 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 18:33:53,577] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_channel_partner_tied 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 18:33:53,580] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 18:33:53,582] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 18:33:53,582] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 18:33:53,794] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): ambassador_channel_partner_tied> on 2021-06-13T00:00:00+00:00
+[2021-06-14 18:33:53,947] {standard_task_runner.py:52} INFO - Started process 248 to run task
+[2021-06-14 18:33:54,238] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'ambassador_channel_partner_tied', '2021-06-13T00:00:00+00:00', '--job-id', '105', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpfwg5m27t', '--error-file', '/tmp/tmpqir0dr9i']
+[2021-06-14 18:33:54,243] {standard_task_runner.py:77} INFO - Job 105: Subtask ambassador_channel_partner_tied
+[2021-06-14 18:33:55,798] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.ambassador_channel_partner_tied 2021-06-13T00:00:00+00:00 [running]> on host 89c270a4555f
+[2021-06-14 18:33:56,855] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=ambassador_channel_partner_tied
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 18:33:56,856] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 18:34:11,402] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 18:34:19,135] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-14 18:34:19,136] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-14 18:34:19,220] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=ambassador_channel_partner_tied, execution_date=20210613T000000, start_date=20210614T183353, end_date=20210614T183419
+[2021-06-14 18:34:19,502] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-14 18:34:19,665] {local_task_job.py:151} INFO - Task exited with return code 0

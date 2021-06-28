@@ -1,0 +1,151 @@
+[2021-06-14 12:49:00,079] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.customer_servicecentre_logins 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:49:00,415] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.customer_servicecentre_logins 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:49:00,417] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:49:00,418] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 12:49:00,422] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:49:00,529] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): customer_servicecentre_logins> on 2021-06-13T00:00:00+00:00
+[2021-06-14 12:49:00,615] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'customer_servicecentre_logins', '2021-06-13T00:00:00+00:00', '--job-id', '45', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpbxj4bo2h', '--error-file', '/tmp/tmpzcio9bm6']
+[2021-06-14 12:49:00,617] {standard_task_runner.py:77} INFO - Job 45: Subtask customer_servicecentre_logins
+[2021-06-14 12:49:00,587] {standard_task_runner.py:52} INFO - Started process 379 to run task
+[2021-06-14 12:49:01,434] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.customer_servicecentre_logins 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 12:49:01,970] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=customer_servicecentre_logins
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 12:49:01,971] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 12:49:06,151] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 12:49:06,698] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 148, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 236, in executemany
+    self._get_db().encoding,
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 266, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1054, "Unknown column 'lang_id' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 219, in customer_servicecentre_logins
+    index=False)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/core/generic.py", line 2615, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 598, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1406, in to_sql
+    raise err
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1398, in to_sql
+    table.insert(chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 830, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 747, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 148, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 236, in executemany
+    self._get_db().encoding,
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 266, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (1054, "Unknown column 'lang_id' in 'field list'")
+[SQL: INSERT INTO `21north`.`21N_customer_servicecentre_logins` (id, servicecentre_id, country_code, mobilenumber, password, first_name, createddatetime, email, isenabled, lang_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)]
+[parameters: ((17598, 2203, 91, 8143775777, None, 'Samireddy Jayaram Manoj', datetime.datetime(2021, 6, 14, 10, 29, 20), 'samireddymanoj@gmail.com', 1, 1), (17599, 2206, 91, 9795810100, None, 'Naseem Ansari', datetime.datetime(2021, 6, 14, 10, 32, 21), 'naseem.ansari@girnarsoft.co.in', 1, 1), (17601, 2197, 91, 9810079588, None, 'Devi Sharma', datetime.datetime(2021, 6, 14, 10, 35, 11), 'Devi.Sharma@girnarsoft.co.in ', 1, 1), (17602, 2197, 91, 9718171314, None, 'Mukesh Bhardwaj', datetime.datetime(2021, 6, 14, 10, 36, 28), 'mukesh.bhardwaj@girnarsoft.co.in', 1, 1), (17604, 2197, 91, 9711895092, None, 'Vikas', datetime.datetime(2021, 6, 14, 10, 37, 50), 'Vikas.1@gaadi.com', 1, 1), (17605, 2197, 91, 8527377759, None, 'Pradeep Singh', datetime.datetime(2021, 6, 14, 10, 38, 48), 'pradeep.singh@gaadi.com', 1, 1), (17606, 2128, 91, 7240666681, None, 'Karishma Prajapati', datetime.datetime(2021, 6, 14, 11, 20, 44), 'service-vki@roshanhyundai.com', 1, 1), (17607, 2279, 91, 9999026890, 'e32f71024b3e2f95fa11c4ae66a81ab8', 'Aakanksha', datetime.datetime(2021, 6, 14, 11, 47, 13), 'creservice@vw-triumphauto.co.in', 1, 1)  ... displaying 10 of 22 total bound parameter sets ...  (17620, 2301, 62, 8998245274, None, 'Resti', datetime.datetime(2021, 6, 14, 14, 9, 5), 'mgm.resticco@gmail.com', 1, 1), (17621, 2301, 62, 816355008, None, 'Resti', datetime.datetime(2021, 6, 14, 14, 9, 42), 'mgm.resticco2@gmail.com', 1, 1))]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+[2021-06-14 12:49:06,803] {taskinstance.py:1531} INFO - Marking task as UP_FOR_RETRY. dag_id=summary_db, task_id=customer_servicecentre_logins, execution_date=20210613T000000, start_date=20210614T124900, end_date=20210614T124906
+[2021-06-14 12:49:07,081] {local_task_job.py:151} INFO - Task exited with return code 1
+[2021-06-14 15:28:07,188] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.customer_servicecentre_logins 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 15:28:07,321] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.customer_servicecentre_logins 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 15:28:07,322] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 15:28:07,322] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 15:28:07,322] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 15:28:07,406] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): customer_servicecentre_logins> on 2021-06-13T00:00:00+00:00
+[2021-06-14 15:28:07,429] {standard_task_runner.py:52} INFO - Started process 798 to run task
+[2021-06-14 15:28:07,467] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'customer_servicecentre_logins', '2021-06-13T00:00:00+00:00', '--job-id', '82', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpqjiai_nt', '--error-file', '/tmp/tmp1ztroifg']
+[2021-06-14 15:28:07,468] {standard_task_runner.py:77} INFO - Job 82: Subtask customer_servicecentre_logins
+[2021-06-14 15:28:08,580] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.customer_servicecentre_logins 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 15:28:09,442] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=customer_servicecentre_logins
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 15:28:09,449] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 15:28:12,379] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 15:28:13,801] {logging_mixin.py:104} WARNING - /home/***/.local/lib/python3.6/site-packages/pandas/io/sql.py:1423 UserWarning: The provided table name '21N_customer_servicecentre_logins' is not found exactly as such in the database after writing the table, possibly due to case sensitivity issues. Consider using lower case table names.
+[2021-06-14 15:28:13,801] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-14 15:28:13,802] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-14 15:28:14,070] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=customer_servicecentre_logins, execution_date=20210613T000000, start_date=20210614T152807, end_date=20210614T152814
+[2021-06-14 15:28:14,808] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-14 15:28:14,876] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-06-14 18:33:53,762] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.customer_servicecentre_logins 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 18:33:54,656] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.customer_servicecentre_logins 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 18:33:54,656] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 18:33:54,656] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 18:33:54,656] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 18:33:54,794] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): customer_servicecentre_logins> on 2021-06-13T00:00:00+00:00
+[2021-06-14 18:33:55,840] {standard_task_runner.py:52} INFO - Started process 257 to run task
+[2021-06-14 18:33:56,037] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'customer_servicecentre_logins', '2021-06-13T00:00:00+00:00', '--job-id', '110', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpsw7udnws', '--error-file', '/tmp/tmp72n5gryh']
+[2021-06-14 18:33:56,109] {standard_task_runner.py:77} INFO - Job 110: Subtask customer_servicecentre_logins
+[2021-06-14 18:33:57,023] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.customer_servicecentre_logins 2021-06-13T00:00:00+00:00 [running]> on host 89c270a4555f
+[2021-06-14 18:33:58,221] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=customer_servicecentre_logins
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 18:33:58,234] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 18:34:10,822] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 18:34:11,391] {logging_mixin.py:104} WARNING - /home/***/.local/lib/python3.6/site-packages/pandas/io/sql.py:1423 UserWarning: The provided table name '21N_customer_servicecentre_logins' is not found exactly as such in the database after writing the table, possibly due to case sensitivity issues. Consider using lower case table names.
+[2021-06-14 18:34:11,392] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-14 18:34:11,397] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-14 18:34:11,669] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=customer_servicecentre_logins, execution_date=20210613T000000, start_date=20210614T183353, end_date=20210614T183411
+[2021-06-14 18:34:12,177] {local_task_job.py:197} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2021-06-14 18:34:12,200] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 257
+[2021-06-14 18:34:12,427] {taskinstance.py:1264} ERROR - Received SIGTERM. Terminating subprocesses.
+[2021-06-14 18:34:12,901] {process_utils.py:66} INFO - Process psutil.Process(pid=257, status='terminated', exitcode=1, started='18:33:54') (257) terminated with exit code 1

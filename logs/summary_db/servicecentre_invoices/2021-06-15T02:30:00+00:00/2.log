@@ -1,0 +1,25 @@
+[2021-06-16 13:19:45,416] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.servicecentre_invoices 2021-06-15T02:30:00+00:00 [queued]>
+[2021-06-16 13:19:45,504] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.servicecentre_invoices 2021-06-15T02:30:00+00:00 [queued]>
+[2021-06-16 13:19:45,504] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-16 13:19:45,504] {taskinstance.py:1068} INFO - Starting attempt 2 of 5
+[2021-06-16 13:19:45,505] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-16 13:19:45,551] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): servicecentre_invoices> on 2021-06-15T02:30:00+00:00
+[2021-06-16 13:19:45,567] {standard_task_runner.py:52} INFO - Started process 2089 to run task
+[2021-06-16 13:19:45,571] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'servicecentre_invoices', '2021-06-15T02:30:00+00:00', '--job-id', '240', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpec234uf5', '--error-file', '/tmp/tmpesa684pz']
+[2021-06-16 13:19:45,572] {standard_task_runner.py:77} INFO - Job 240: Subtask servicecentre_invoices
+[2021-06-16 13:19:45,792] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.servicecentre_invoices 2021-06-15T02:30:00+00:00 [running]> on host ac3e7c1eb084
+[2021-06-16 13:19:46,133] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=servicecentre_invoices
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-15T02:30:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-15T02:30:00+00:00
+[2021-06-16 13:19:46,134] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-16 13:19:51,249] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-16 13:19:53,412] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-16 13:19:54,803] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-16 13:19:54,893] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=servicecentre_invoices, execution_date=20210615T023000, start_date=20210616T131945, end_date=20210616T131954
+[2021-06-16 13:19:55,116] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-16 13:19:55,182] {local_task_job.py:151} INFO - Task exited with return code 0

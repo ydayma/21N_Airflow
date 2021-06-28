@@ -1,0 +1,387 @@
+[2021-06-11 12:58:30,891] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [queued]>
+[2021-06-11 12:58:31,001] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [queued]>
+[2021-06-11 12:58:31,004] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-11 12:58:31,005] {taskinstance.py:1068} INFO - Starting attempt 2 of 2
+[2021-06-11 12:58:31,030] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-11 12:58:31,091] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): db> on 2021-06-10T00:00:00+00:00
+[2021-06-11 12:58:31,106] {standard_task_runner.py:52} INFO - Started process 85 to run task
+[2021-06-11 12:58:31,113] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'db', '2021-06-10T00:00:00+00:00', '--job-id', '21', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmp4sbc8x65', '--error-file', '/tmp/tmp4xmtaucy']
+[2021-06-11 12:58:31,124] {standard_task_runner.py:77} INFO - Job 21: Subtask db
+[2021-06-11 12:58:31,275] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [running]> on host 68be65bbce4a
+[2021-06-11 12:58:31,544] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=db
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-10T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-10T00:00:00+00:00
+[2021-06-11 12:58:31,545] {logging_mixin.py:104} INFO - DB Connection started
+[2021-06-11 12:58:32,032] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/connection_cext.py", line 233, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on '127.0.0.1' (111)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 29, in db_conn
+    local_db_connector = mysql.connector.connect(host ='127.0.0.1', user='root', password='password',ssl_disabled=True)
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/__init__.py", line 270, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/connection_cext.py", line 86, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/abstracts.py", line 985, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on '127.0.0.1' (111)
+[2021-06-11 12:58:32,036] {taskinstance.py:1531} INFO - Marking task as FAILED. dag_id=summary_db, task_id=db, execution_date=20210610T000000, start_date=20210611T125830, end_date=20210611T125832
+[2021-06-11 12:58:32,148] {local_task_job.py:151} INFO - Task exited with return code 1
+[2021-06-11 13:05:55,982] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [queued]>
+[2021-06-11 13:05:56,012] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [queued]>
+[2021-06-11 13:05:56,012] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-11 13:05:56,013] {taskinstance.py:1068} INFO - Starting attempt 2 of 2
+[2021-06-11 13:05:56,016] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-11 13:05:56,033] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): db> on 2021-06-10T00:00:00+00:00
+[2021-06-11 13:05:56,051] {standard_task_runner.py:52} INFO - Started process 491 to run task
+[2021-06-11 13:05:56,056] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'db', '2021-06-10T00:00:00+00:00', '--job-id', '23', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmp09hq255d', '--error-file', '/tmp/tmpjslhbafq']
+[2021-06-11 13:05:56,057] {standard_task_runner.py:77} INFO - Job 23: Subtask db
+[2021-06-11 13:05:56,130] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [running]> on host 68be65bbce4a
+[2021-06-11 13:05:56,210] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=db
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-10T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-10T00:00:00+00:00
+[2021-06-11 13:05:56,211] {logging_mixin.py:104} INFO - DB Connection started
+[2021-06-11 13:05:56,649] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/connection_cext.py", line 233, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on '127.0.0.1' (111)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 29, in db_conn
+    local_db_connector = mysql.connector.connect(host ='127.0.0.1', user='root', password='password',ssl_disabled=True)
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/__init__.py", line 270, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/connection_cext.py", line 86, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/abstracts.py", line 985, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on '127.0.0.1' (111)
+[2021-06-11 13:05:56,653] {taskinstance.py:1531} INFO - Marking task as FAILED. dag_id=summary_db, task_id=db, execution_date=20210610T000000, start_date=20210611T130555, end_date=20210611T130556
+[2021-06-11 13:05:56,711] {local_task_job.py:151} INFO - Task exited with return code 1
+[2021-06-11 13:19:49,290] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [queued]>
+[2021-06-11 13:19:49,324] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [queued]>
+[2021-06-11 13:19:49,324] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-11 13:19:49,324] {taskinstance.py:1068} INFO - Starting attempt 2 of 2
+[2021-06-11 13:19:49,327] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-11 13:19:49,341] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): db> on 2021-06-10T00:00:00+00:00
+[2021-06-11 13:19:49,349] {standard_task_runner.py:52} INFO - Started process 110 to run task
+[2021-06-11 13:19:49,355] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'db', '2021-06-10T00:00:00+00:00', '--job-id', '6', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpikxb2kqc', '--error-file', '/tmp/tmpl334e5jd']
+[2021-06-11 13:19:49,355] {standard_task_runner.py:77} INFO - Job 6: Subtask db
+[2021-06-11 13:19:49,413] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [running]> on host bed3fc62f41e
+[2021-06-11 13:19:49,496] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=db
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-10T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-10T00:00:00+00:00
+[2021-06-11 13:19:49,497] {logging_mixin.py:104} INFO - DB Connection started
+[2021-06-11 13:19:49,846] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/connection_cext.py", line 233, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: SSL connection error: error:1425F102:SSL routines:ssl_choose_client_version:unsupported protocol
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 28, in db_conn
+    replica_db_connector = mysql.connector.connect(host= '3.0.136.197', user='yantra', password='0FRZ*j7,>M>C,&tJ')
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/__init__.py", line 270, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/connection_cext.py", line 86, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/abstracts.py", line 985, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.InterfaceError: 2026 (HY000): SSL connection error: error:1425F102:SSL routines:ssl_choose_client_version:unsupported protocol
+[2021-06-11 13:19:49,850] {taskinstance.py:1531} INFO - Marking task as FAILED. dag_id=summary_db, task_id=db, execution_date=20210610T000000, start_date=20210611T131949, end_date=20210611T131949
+[2021-06-11 13:19:49,894] {local_task_job.py:151} INFO - Task exited with return code 1
+[2021-06-11 13:31:19,227] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [queued]>
+[2021-06-11 13:31:19,253] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [queued]>
+[2021-06-11 13:31:19,254] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-11 13:31:19,254] {taskinstance.py:1068} INFO - Starting attempt 2 of 2
+[2021-06-11 13:31:19,258] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-11 13:31:19,278] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): db> on 2021-06-10T00:00:00+00:00
+[2021-06-11 13:31:19,284] {standard_task_runner.py:52} INFO - Started process 431 to run task
+[2021-06-11 13:31:19,289] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'db', '2021-06-10T00:00:00+00:00', '--job-id', '10', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmphekagbdy', '--error-file', '/tmp/tmplxusvchw']
+[2021-06-11 13:31:19,289] {standard_task_runner.py:77} INFO - Job 10: Subtask db
+[2021-06-11 13:31:19,340] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [running]> on host bed3fc62f41e
+[2021-06-11 13:31:19,408] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=db
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-10T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-10T00:00:00+00:00
+[2021-06-11 13:31:19,409] {logging_mixin.py:104} INFO - DB Connection started
+[2021-06-11 13:31:20,003] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/connection_cext.py", line 233, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Authentication plugin 'caching_sha2_password' reported error: Authentication requires secure connection.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 29, in db_conn
+    local_db_connector = mysql.connector.connect(host ='host.docker.internal', user='root', password='password',ssl_disabled=True)
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/__init__.py", line 270, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/connection_cext.py", line 86, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/abstracts.py", line 985, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.InterfaceError: 2061 (HY000): Authentication plugin 'caching_sha2_password' reported error: Authentication requires secure connection.
+[2021-06-11 13:31:20,006] {taskinstance.py:1531} INFO - Marking task as FAILED. dag_id=summary_db, task_id=db, execution_date=20210610T000000, start_date=20210611T133119, end_date=20210611T133120
+[2021-06-11 13:31:20,063] {local_task_job.py:151} INFO - Task exited with return code 1
+[2021-06-11 14:33:32,013] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [queued]>
+[2021-06-11 14:33:32,046] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [queued]>
+[2021-06-11 14:33:32,046] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-11 14:33:32,046] {taskinstance.py:1068} INFO - Starting attempt 2 of 2
+[2021-06-11 14:33:32,051] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-11 14:33:32,071] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): db> on 2021-06-10T00:00:00+00:00
+[2021-06-11 14:33:32,078] {standard_task_runner.py:52} INFO - Started process 908 to run task
+[2021-06-11 14:33:32,087] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'db', '2021-06-10T00:00:00+00:00', '--job-id', '21', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpu6y8cdpy', '--error-file', '/tmp/tmp3rzetnyr']
+[2021-06-11 14:33:32,087] {standard_task_runner.py:77} INFO - Job 21: Subtask db
+[2021-06-11 14:33:32,171] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [running]> on host bed3fc62f41e
+[2021-06-11 14:33:32,292] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=db
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-10T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-10T00:00:00+00:00
+[2021-06-11 14:33:32,294] {logging_mixin.py:104} INFO - DB Connection started
+[2021-06-11 14:33:32,771] {logging_mixin.py:104} INFO - <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2021-06-11 14:33:32,795] {logging_mixin.py:104} INFO - replica DB -------------->>>>>>>>>>>>>>> <mysql.connector.connection_cext.CMySQLConnection object at 0x7f1a26785ba8>
+[2021-06-11 14:33:32,795] {logging_mixin.py:104} INFO - localhost-------------------------->>>>>>>>>>>>>>>> <mysql.connector.connection_cext.CMySQLConnection object at 0x7f1a26785f28>
+[2021-06-11 14:33:33,125] {logging_mixin.py:104} INFO - ------------------------------------Getting Data from Replica Database--------------------------------
+[2021-06-11 14:33:33,976] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/connection_cext.py", line 506, in cmd_query
+    raw_as_string=raw_as_string)
+_mysql_connector.MySQLInterfaceError: Duplicate entry '1693410' for key '21n_ambassador_channel_partner_comission.PRIMARY'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 43, in db_conn
+    local_db_cursor.executemany(insert_query, rows)
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/cursor_cext.py", line 352, in executemany
+    return self.execute(stmt)
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/cursor_cext.py", line 266, in execute
+    raw_as_string=self._raw_as_string)
+  File "/home/airflow/.local/lib/python3.6/site-packages/mysql/connector/connection_cext.py", line 509, in cmd_query
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.IntegrityError: 1062 (23000): Duplicate entry '1693410' for key '21n_ambassador_channel_partner_comission.PRIMARY'
+[2021-06-11 14:33:33,980] {taskinstance.py:1531} INFO - Marking task as FAILED. dag_id=summary_db, task_id=db, execution_date=20210610T000000, start_date=20210611T143332, end_date=20210611T143333
+[2021-06-11 14:33:34,044] {local_task_job.py:151} INFO - Task exited with return code 1
+[2021-06-11 18:07:29,620] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [queued]>
+[2021-06-11 18:07:29,829] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [queued]>
+[2021-06-11 18:07:29,832] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-11 18:07:29,833] {taskinstance.py:1068} INFO - Starting attempt 2 of 2
+[2021-06-11 18:07:29,844] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-11 18:07:29,990] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): db> on 2021-06-10T00:00:00+00:00
+[2021-06-11 18:07:30,071] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'db', '2021-06-10T00:00:00+00:00', '--job-id', '24', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpu6ukiyia', '--error-file', '/tmp/tmpb1jru68x']
+[2021-06-11 18:07:30,072] {standard_task_runner.py:77} INFO - Job 24: Subtask db
+[2021-06-11 18:07:30,035] {standard_task_runner.py:52} INFO - Started process 637 to run task
+[2021-06-11 18:07:30,256] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.db 2021-06-10T00:00:00+00:00 [running]> on host f706882b8105
+[2021-06-11 18:07:30,439] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=db
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-10T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-10T00:00:00+00:00
+[2021-06-11 18:07:30,440] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-11 18:07:30,857] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 508, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/__init__.py", line 130, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (2026, 'SSL connection error: error:1425F102:SSL routines:ssl_choose_client_version:unsupported protocol')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 56, in ambassador_channel_partner_comission
+    con='mysql://yantra:0FRZ*j7,>M>C,&tJ@3.0.136.197:3306/21north' )
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 383, in read_sql_query
+    chunksize=chunksize,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1295, in read_query
+    result = self.execute(*args)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1162, in execute
+    *args, **kwargs
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2234, in execute
+    connection = self._contextual_connect(close_with_result=True)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2302, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2340, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1584, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 508, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/__init__.py", line 130, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (2026, 'SSL connection error: error:1425F102:SSL routines:ssl_choose_client_version:unsupported protocol')
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+[2021-06-11 18:07:30,864] {taskinstance.py:1531} INFO - Marking task as FAILED. dag_id=summary_db, task_id=db, execution_date=20210610T000000, start_date=20210611T180729, end_date=20210611T180730
+[2021-06-11 18:07:31,004] {local_task_job.py:151} INFO - Task exited with return code 1

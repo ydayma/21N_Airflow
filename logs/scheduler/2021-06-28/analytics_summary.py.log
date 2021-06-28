@@ -1,0 +1,640 @@
+[2021-06-28 15:15:49,848] {scheduler_job.py:182} INFO - Started process (PID=55) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:15:49,850] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:15:49,851] {logging_mixin.py:104} INFO - [2021-06-28 15:15:49,851] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:15:52,954] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:16:05,123] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:16:08,413] {logging_mixin.py:104} INFO - [2021-06-28 15:16:08,413] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:16:08,609] {logging_mixin.py:104} INFO - [2021-06-28 15:16:08,609] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-26 23:45:00+00:00
+[2021-06-28 15:16:08,777] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 18.935 seconds
+[2021-06-28 15:16:11,725] {scheduler_job.py:182} INFO - Started process (PID=84) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:16:11,745] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:16:11,748] {logging_mixin.py:104} INFO - [2021-06-28 15:16:11,748] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:16:12,139] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:16:15,151] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:16:15,356] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: summary_db.ambassador_refunds_type 2021-06-15 02:30:00+00:00 [up_for_retry]> in state up_for_retry
+[2021-06-28 15:16:15,373] {logging_mixin.py:104} INFO - [2021-06-28 15:16:15,373] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:16:15,460] {logging_mixin.py:104} INFO - [2021-06-28 15:16:15,455] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-26 23:45:00+00:00
+[2021-06-28 15:16:15,499] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 3.821 seconds
+[2021-06-28 15:16:46,016] {scheduler_job.py:182} INFO - Started process (PID=136) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:16:46,031] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:16:46,032] {logging_mixin.py:104} INFO - [2021-06-28 15:16:46,032] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:16:46,169] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:16:47,201] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:16:47,297] {logging_mixin.py:104} INFO - [2021-06-28 15:16:47,297] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:16:47,346] {logging_mixin.py:104} INFO - [2021-06-28 15:16:47,346] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-26 23:45:00+00:00
+[2021-06-28 15:16:47,375] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.364 seconds
+[2021-06-28 15:17:17,412] {scheduler_job.py:182} INFO - Started process (PID=198) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:17:17,413] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:17:17,414] {logging_mixin.py:104} INFO - [2021-06-28 15:17:17,414] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:17:17,493] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:17:18,156] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:17:18,184] {logging_mixin.py:104} INFO - [2021-06-28 15:17:18,184] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:17:18,235] {logging_mixin.py:104} INFO - [2021-06-28 15:17:18,235] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-26 23:45:00+00:00
+[2021-06-28 15:17:18,256] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.846 seconds
+[2021-06-28 15:17:48,814] {scheduler_job.py:182} INFO - Started process (PID=259) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:17:48,820] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:17:48,821] {logging_mixin.py:104} INFO - [2021-06-28 15:17:48,821] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:17:48,964] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:17:49,510] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:17:49,525] {logging_mixin.py:104} INFO - [2021-06-28 15:17:49,525] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:17:49,545] {logging_mixin.py:104} INFO - [2021-06-28 15:17:49,545] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-26 23:45:00+00:00
+[2021-06-28 15:17:49,558] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.753 seconds
+[2021-06-28 15:18:20,234] {scheduler_job.py:182} INFO - Started process (PID=333) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:18:20,236] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:18:20,237] {logging_mixin.py:104} INFO - [2021-06-28 15:18:20,236] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:18:20,340] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:18:20,985] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:18:21,020] {logging_mixin.py:104} INFO - [2021-06-28 15:18:21,020] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:18:21,060] {logging_mixin.py:104} INFO - [2021-06-28 15:18:21,060] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-26 23:45:00+00:00
+[2021-06-28 15:18:21,082] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.852 seconds
+[2021-06-28 15:18:51,413] {scheduler_job.py:182} INFO - Started process (PID=396) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:18:51,417] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:18:51,418] {logging_mixin.py:104} INFO - [2021-06-28 15:18:51,418] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:18:51,573] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:18:52,249] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:18:52,270] {logging_mixin.py:104} INFO - [2021-06-28 15:18:52,269] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:18:52,296] {logging_mixin.py:104} INFO - [2021-06-28 15:18:52,296] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-26 23:45:00+00:00
+[2021-06-28 15:18:52,309] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.901 seconds
+[2021-06-28 15:19:22,922] {scheduler_job.py:182} INFO - Started process (PID=456) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:19:22,926] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:19:22,927] {logging_mixin.py:104} INFO - [2021-06-28 15:19:22,927] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:19:23,030] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:19:23,639] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:19:24,082] {logging_mixin.py:104} INFO - [2021-06-28 15:19:24,082] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:19:24,105] {logging_mixin.py:104} INFO - [2021-06-28 15:19:24,105] {dag.py:1851} INFO - Creating ORM DAG for summary_db
+[2021-06-28 15:19:24,142] {logging_mixin.py:104} INFO - [2021-06-28 15:19:24,141] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-26 23:45:00+00:00
+[2021-06-28 15:19:24,165] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.248 seconds
+[2021-06-28 15:19:54,598] {scheduler_job.py:182} INFO - Started process (PID=521) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:19:54,617] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:19:54,618] {logging_mixin.py:104} INFO - [2021-06-28 15:19:54,618] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:19:54,844] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:19:56,621] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:19:56,664] {logging_mixin.py:104} INFO - [2021-06-28 15:19:56,664] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:19:56,705] {logging_mixin.py:104} INFO - [2021-06-28 15:19:56,705] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:19:56,737] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 2.152 seconds
+[2021-06-28 15:20:27,378] {scheduler_job.py:182} INFO - Started process (PID=589) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:20:27,414] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:20:27,415] {logging_mixin.py:104} INFO - [2021-06-28 15:20:27,415] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:20:27,929] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:20:29,958] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:20:29,984] {logging_mixin.py:104} INFO - [2021-06-28 15:20:29,984] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:20:30,033] {logging_mixin.py:104} INFO - [2021-06-28 15:20:30,033] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:20:30,053] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 2.698 seconds
+[2021-06-28 15:21:00,375] {scheduler_job.py:182} INFO - Started process (PID=656) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:21:00,376] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:21:00,378] {logging_mixin.py:104} INFO - [2021-06-28 15:21:00,377] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:21:00,562] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:21:01,785] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:21:01,832] {logging_mixin.py:104} INFO - [2021-06-28 15:21:01,832] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:21:01,887] {logging_mixin.py:104} INFO - [2021-06-28 15:21:01,887] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:21:01,904] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.537 seconds
+[2021-06-28 15:21:32,336] {scheduler_job.py:182} INFO - Started process (PID=715) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:21:32,344] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:21:32,351] {logging_mixin.py:104} INFO - [2021-06-28 15:21:32,351] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:21:32,501] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:21:34,301] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:21:34,355] {logging_mixin.py:104} INFO - [2021-06-28 15:21:34,354] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:21:34,451] {logging_mixin.py:104} INFO - [2021-06-28 15:21:34,450] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:21:34,522] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 2.192 seconds
+[2021-06-28 15:22:04,896] {scheduler_job.py:182} INFO - Started process (PID=777) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:22:04,902] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:22:04,944] {logging_mixin.py:104} INFO - [2021-06-28 15:22:04,944] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:22:05,283] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:22:07,278] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:22:07,324] {logging_mixin.py:104} INFO - [2021-06-28 15:22:07,323] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:22:07,390] {logging_mixin.py:104} INFO - [2021-06-28 15:22:07,390] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:22:07,421] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 2.530 seconds
+[2021-06-28 15:22:37,761] {scheduler_job.py:182} INFO - Started process (PID=846) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:22:37,783] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:22:37,785] {logging_mixin.py:104} INFO - [2021-06-28 15:22:37,784] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:22:38,198] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:22:39,751] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:22:39,807] {logging_mixin.py:104} INFO - [2021-06-28 15:22:39,807] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:22:39,895] {logging_mixin.py:104} INFO - [2021-06-28 15:22:39,895] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:22:39,919] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 2.208 seconds
+[2021-06-28 15:23:10,134] {scheduler_job.py:182} INFO - Started process (PID=910) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:23:10,137] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:23:10,157] {logging_mixin.py:104} INFO - [2021-06-28 15:23:10,152] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:23:10,474] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:23:11,859] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:23:12,523] {logging_mixin.py:104} INFO - [2021-06-28 15:23:12,523] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:23:12,600] {logging_mixin.py:104} INFO - [2021-06-28 15:23:12,599] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:23:12,693] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 2.567 seconds
+[2021-06-28 15:23:42,905] {scheduler_job.py:182} INFO - Started process (PID=973) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:23:42,939] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:23:42,954] {logging_mixin.py:104} INFO - [2021-06-28 15:23:42,940] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:23:43,186] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:23:44,421] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:23:44,458] {logging_mixin.py:104} INFO - [2021-06-28 15:23:44,458] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:23:44,500] {logging_mixin.py:104} INFO - [2021-06-28 15:23:44,499] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:23:44,519] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.631 seconds
+[2021-06-28 15:24:15,392] {scheduler_job.py:182} INFO - Started process (PID=1036) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:24:15,393] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:24:15,394] {logging_mixin.py:104} INFO - [2021-06-28 15:24:15,394] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:24:15,478] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:24:16,005] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:24:16,025] {logging_mixin.py:104} INFO - [2021-06-28 15:24:16,025] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:24:16,049] {logging_mixin.py:104} INFO - [2021-06-28 15:24:16,049] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:24:16,059] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.671 seconds
+[2021-06-28 15:24:46,870] {scheduler_job.py:182} INFO - Started process (PID=1105) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:24:46,883] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:24:46,884] {logging_mixin.py:104} INFO - [2021-06-28 15:24:46,884] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:24:47,012] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:24:47,802] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:24:47,829] {logging_mixin.py:104} INFO - [2021-06-28 15:24:47,829] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:24:47,867] {logging_mixin.py:104} INFO - [2021-06-28 15:24:47,867] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:24:47,885] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.025 seconds
+[2021-06-28 15:25:18,838] {scheduler_job.py:182} INFO - Started process (PID=1173) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:25:18,840] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:25:18,841] {logging_mixin.py:104} INFO - [2021-06-28 15:25:18,841] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:25:19,038] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:25:19,623] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:25:19,642] {logging_mixin.py:104} INFO - [2021-06-28 15:25:19,642] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:25:19,664] {logging_mixin.py:104} INFO - [2021-06-28 15:25:19,664] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:25:19,679] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.847 seconds
+[2021-06-28 15:25:50,107] {scheduler_job.py:182} INFO - Started process (PID=1231) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:25:50,108] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:25:50,109] {logging_mixin.py:104} INFO - [2021-06-28 15:25:50,109] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:25:50,182] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:25:50,660] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:25:50,678] {logging_mixin.py:104} INFO - [2021-06-28 15:25:50,678] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:25:50,704] {logging_mixin.py:104} INFO - [2021-06-28 15:25:50,704] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:25:50,715] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.611 seconds
+[2021-06-28 15:26:20,994] {scheduler_job.py:182} INFO - Started process (PID=1290) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:26:20,996] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:26:20,998] {logging_mixin.py:104} INFO - [2021-06-28 15:26:20,997] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:26:21,121] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:26:21,796] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:26:21,821] {logging_mixin.py:104} INFO - [2021-06-28 15:26:21,821] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:26:21,850] {logging_mixin.py:104} INFO - [2021-06-28 15:26:21,849] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:26:21,868] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.878 seconds
+[2021-06-28 15:26:52,023] {scheduler_job.py:182} INFO - Started process (PID=1364) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:26:52,030] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:26:52,032] {logging_mixin.py:104} INFO - [2021-06-28 15:26:52,032] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:26:52,163] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:26:53,077] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:26:53,106] {logging_mixin.py:104} INFO - [2021-06-28 15:26:53,106] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:26:53,156] {logging_mixin.py:104} INFO - [2021-06-28 15:26:53,155] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:26:53,172] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.162 seconds
+[2021-06-28 15:27:23,703] {scheduler_job.py:182} INFO - Started process (PID=1427) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:27:23,704] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:27:23,706] {logging_mixin.py:104} INFO - [2021-06-28 15:27:23,705] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:27:23,803] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:27:25,341] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:27:25,369] {logging_mixin.py:104} INFO - [2021-06-28 15:27:25,368] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:27:25,424] {logging_mixin.py:104} INFO - [2021-06-28 15:27:25,423] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:27:25,455] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.756 seconds
+[2021-06-28 15:27:55,881] {scheduler_job.py:182} INFO - Started process (PID=1488) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:27:55,886] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:27:55,887] {logging_mixin.py:104} INFO - [2021-06-28 15:27:55,887] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:27:56,101] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:27:56,987] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:27:57,010] {logging_mixin.py:104} INFO - [2021-06-28 15:27:57,010] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:27:57,041] {logging_mixin.py:104} INFO - [2021-06-28 15:27:57,041] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:27:57,057] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.181 seconds
+[2021-06-28 15:28:27,345] {scheduler_job.py:182} INFO - Started process (PID=1561) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:28:27,348] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:28:27,350] {logging_mixin.py:104} INFO - [2021-06-28 15:28:27,350] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:28:27,517] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:28:29,107] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:28:29,149] {logging_mixin.py:104} INFO - [2021-06-28 15:28:29,149] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:28:29,203] {logging_mixin.py:104} INFO - [2021-06-28 15:28:29,202] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:28:29,240] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.911 seconds
+[2021-06-28 15:28:59,767] {scheduler_job.py:182} INFO - Started process (PID=1626) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:28:59,768] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:28:59,769] {logging_mixin.py:104} INFO - [2021-06-28 15:28:59,768] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:28:59,854] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:29:00,421] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:29:00,441] {logging_mixin.py:104} INFO - [2021-06-28 15:29:00,441] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:29:00,466] {logging_mixin.py:104} INFO - [2021-06-28 15:29:00,466] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:29:00,484] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.721 seconds
+[2021-06-28 15:29:31,192] {scheduler_job.py:182} INFO - Started process (PID=1686) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:29:31,194] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:29:31,195] {logging_mixin.py:104} INFO - [2021-06-28 15:29:31,194] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:29:31,260] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:29:31,795] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:29:31,820] {logging_mixin.py:104} INFO - [2021-06-28 15:29:31,820] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:29:31,842] {logging_mixin.py:104} INFO - [2021-06-28 15:29:31,842] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:29:31,854] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.667 seconds
+[2021-06-28 15:30:02,287] {scheduler_job.py:182} INFO - Started process (PID=1745) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:30:02,289] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:30:02,290] {logging_mixin.py:104} INFO - [2021-06-28 15:30:02,290] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:30:02,423] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:30:03,263] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:30:03,296] {logging_mixin.py:104} INFO - [2021-06-28 15:30:03,296] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:30:03,327] {logging_mixin.py:104} INFO - [2021-06-28 15:30:03,327] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:30:03,346] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.069 seconds
+[2021-06-28 15:30:33,884] {scheduler_job.py:182} INFO - Started process (PID=1817) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:30:33,885] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:30:33,887] {logging_mixin.py:104} INFO - [2021-06-28 15:30:33,886] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:30:34,080] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:30:35,330] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:30:35,394] {logging_mixin.py:104} INFO - [2021-06-28 15:30:35,394] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:30:35,445] {logging_mixin.py:104} INFO - [2021-06-28 15:30:35,445] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:30:35,482] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.615 seconds
+[2021-06-28 15:31:05,687] {scheduler_job.py:182} INFO - Started process (PID=1872) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:31:05,689] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:31:05,691] {logging_mixin.py:104} INFO - [2021-06-28 15:31:05,690] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:31:05,808] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:31:06,380] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:31:06,401] {logging_mixin.py:104} INFO - [2021-06-28 15:31:06,400] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:31:06,421] {logging_mixin.py:104} INFO - [2021-06-28 15:31:06,421] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:31:06,438] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.755 seconds
+[2021-06-28 15:31:36,471] {scheduler_job.py:182} INFO - Started process (PID=1944) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:31:36,477] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:31:36,478] {logging_mixin.py:104} INFO - [2021-06-28 15:31:36,478] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:31:36,589] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:31:37,380] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:31:37,403] {logging_mixin.py:104} INFO - [2021-06-28 15:31:37,402] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:31:37,422] {logging_mixin.py:104} INFO - [2021-06-28 15:31:37,422] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:31:37,435] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.969 seconds
+[2021-06-28 15:33:46,693] {scheduler_job.py:182} INFO - Started process (PID=35) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:33:46,713] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:33:46,720] {logging_mixin.py:104} INFO - [2021-06-28 15:33:46,714] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:33:48,070] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:33:51,711] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:33:51,813] {logging_mixin.py:104} INFO - [2021-06-28 15:33:51,813] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:33:51,931] {logging_mixin.py:104} INFO - [2021-06-28 15:33:51,931] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:33:52,073] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 5.391 seconds
+[2021-06-28 15:33:57,594] {scheduler_job.py:182} INFO - Started process (PID=63) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:33:57,598] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:33:57,599] {logging_mixin.py:104} INFO - [2021-06-28 15:33:57,598] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:33:58,063] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:33:59,585] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:33:59,673] {scheduler_job.py:600} INFO - Executed failure callback for <TaskInstance: summary_db.slot_tracker 2021-06-26 23:45:00+00:00 [failed]> in state failed
+[2021-06-28 15:33:59,894] {logging_mixin.py:104} INFO - [2021-06-28 15:33:59,893] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:34:00,018] {logging_mixin.py:104} INFO - [2021-06-28 15:34:00,018] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:34:00,084] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 2.515 seconds
+[2021-06-28 15:34:30,495] {scheduler_job.py:182} INFO - Started process (PID=118) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:34:30,497] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:34:30,498] {logging_mixin.py:104} INFO - [2021-06-28 15:34:30,498] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:34:30,679] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:34:32,570] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:34:32,711] {logging_mixin.py:104} INFO - [2021-06-28 15:34:32,710] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:34:32,781] {logging_mixin.py:104} INFO - [2021-06-28 15:34:32,781] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:34:32,844] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 2.353 seconds
+[2021-06-28 15:35:03,042] {scheduler_job.py:182} INFO - Started process (PID=183) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:35:03,044] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:35:03,045] {logging_mixin.py:104} INFO - [2021-06-28 15:35:03,044] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:35:03,178] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:35:03,881] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:35:03,909] {logging_mixin.py:104} INFO - [2021-06-28 15:35:03,909] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:35:03,965] {logging_mixin.py:104} INFO - [2021-06-28 15:35:03,964] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:35:04,026] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.001 seconds
+[2021-06-28 15:35:34,302] {scheduler_job.py:182} INFO - Started process (PID=243) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:35:34,316] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:35:34,317] {logging_mixin.py:104} INFO - [2021-06-28 15:35:34,317] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:35:34,680] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:35:36,581] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:35:36,672] {logging_mixin.py:104} INFO - [2021-06-28 15:35:36,672] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:35:36,771] {logging_mixin.py:104} INFO - [2021-06-28 15:35:36,771] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:35:36,907] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 2.638 seconds
+[2021-06-28 15:36:07,143] {scheduler_job.py:182} INFO - Started process (PID=310) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:36:07,154] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:36:07,155] {logging_mixin.py:104} INFO - [2021-06-28 15:36:07,155] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:36:07,477] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:36:09,580] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:36:09,622] {logging_mixin.py:104} INFO - [2021-06-28 15:36:09,622] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:36:09,699] {logging_mixin.py:104} INFO - [2021-06-28 15:36:09,698] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:36:09,746] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 2.614 seconds
+[2021-06-28 15:36:40,139] {scheduler_job.py:182} INFO - Started process (PID=374) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:36:40,145] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:36:40,146] {logging_mixin.py:104} INFO - [2021-06-28 15:36:40,146] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:36:40,556] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:36:41,418] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:36:41,508] {logging_mixin.py:104} INFO - [2021-06-28 15:36:41,508] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:36:41,537] {logging_mixin.py:104} INFO - [2021-06-28 15:36:41,537] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:36:41,595] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.474 seconds
+[2021-06-28 15:37:11,809] {scheduler_job.py:182} INFO - Started process (PID=434) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:37:11,811] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:37:11,819] {logging_mixin.py:104} INFO - [2021-06-28 15:37:11,819] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:37:11,970] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:37:12,809] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:37:13,124] {logging_mixin.py:104} INFO - [2021-06-28 15:37:13,124] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:37:13,140] {logging_mixin.py:104} INFO - [2021-06-28 15:37:13,140] {dag.py:1851} INFO - Creating ORM DAG for summary_db
+[2021-06-28 15:37:13,159] {logging_mixin.py:104} INFO - [2021-06-28 15:37:13,159] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-26 23:45:00+00:00
+[2021-06-28 15:37:13,174] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.380 seconds
+[2021-06-28 15:37:43,646] {scheduler_job.py:182} INFO - Started process (PID=503) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:37:43,647] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:37:43,648] {logging_mixin.py:104} INFO - [2021-06-28 15:37:43,648] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:37:43,789] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:37:44,455] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:37:44,480] {logging_mixin.py:104} INFO - [2021-06-28 15:37:44,480] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:37:44,509] {logging_mixin.py:104} INFO - [2021-06-28 15:37:44,508] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-26 23:45:00+00:00
+[2021-06-28 15:37:44,526] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.885 seconds
+[2021-06-28 15:38:14,588] {scheduler_job.py:182} INFO - Started process (PID=573) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:38:14,589] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:38:14,590] {logging_mixin.py:104} INFO - [2021-06-28 15:38:14,590] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:38:14,677] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:38:15,396] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:38:15,420] {logging_mixin.py:104} INFO - [2021-06-28 15:38:15,420] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:38:15,485] {logging_mixin.py:104} INFO - [2021-06-28 15:38:15,484] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-26 23:45:00+00:00
+[2021-06-28 15:38:15,512] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.931 seconds
+[2021-06-28 15:38:45,581] {scheduler_job.py:182} INFO - Started process (PID=645) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:38:45,583] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:38:45,585] {logging_mixin.py:104} INFO - [2021-06-28 15:38:45,584] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:38:45,861] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:38:46,935] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:38:46,971] {logging_mixin.py:104} INFO - [2021-06-28 15:38:46,971] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:38:47,015] {logging_mixin.py:104} INFO - [2021-06-28 15:38:47,015] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:38:47,103] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.532 seconds
+[2021-06-28 15:39:17,205] {scheduler_job.py:182} INFO - Started process (PID=714) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:39:17,208] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:39:17,209] {logging_mixin.py:104} INFO - [2021-06-28 15:39:17,209] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:39:17,343] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:39:18,159] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:39:18,192] {logging_mixin.py:104} INFO - [2021-06-28 15:39:18,192] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:39:18,226] {logging_mixin.py:104} INFO - [2021-06-28 15:39:18,226] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:39:18,246] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.047 seconds
+[2021-06-28 15:39:48,336] {scheduler_job.py:182} INFO - Started process (PID=777) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:39:48,337] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:39:48,339] {logging_mixin.py:104} INFO - [2021-06-28 15:39:48,338] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:39:48,474] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:39:49,335] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:39:49,380] {logging_mixin.py:104} INFO - [2021-06-28 15:39:49,379] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:39:49,423] {logging_mixin.py:104} INFO - [2021-06-28 15:39:49,423] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:39:49,437] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.120 seconds
+[2021-06-28 15:40:19,916] {scheduler_job.py:182} INFO - Started process (PID=849) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:40:19,917] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:40:19,918] {logging_mixin.py:104} INFO - [2021-06-28 15:40:19,918] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:40:20,032] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:40:20,854] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:40:20,906] {logging_mixin.py:104} INFO - [2021-06-28 15:40:20,905] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:40:20,961] {logging_mixin.py:104} INFO - [2021-06-28 15:40:20,960] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:40:20,979] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.067 seconds
+[2021-06-28 15:40:51,744] {scheduler_job.py:182} INFO - Started process (PID=913) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:40:51,749] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:40:51,751] {logging_mixin.py:104} INFO - [2021-06-28 15:40:51,750] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:40:51,844] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:40:52,496] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:40:52,524] {logging_mixin.py:104} INFO - [2021-06-28 15:40:52,524] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:40:52,547] {logging_mixin.py:104} INFO - [2021-06-28 15:40:52,547] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:40:52,564] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.825 seconds
+[2021-06-28 15:41:22,751] {scheduler_job.py:182} INFO - Started process (PID=972) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:41:22,753] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:41:22,754] {logging_mixin.py:104} INFO - [2021-06-28 15:41:22,754] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:41:22,848] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:41:23,436] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:41:23,459] {logging_mixin.py:104} INFO - [2021-06-28 15:41:23,459] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:41:23,479] {logging_mixin.py:104} INFO - [2021-06-28 15:41:23,479] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:41:23,500] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.753 seconds
+[2021-06-28 15:41:54,274] {scheduler_job.py:182} INFO - Started process (PID=1043) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:41:54,276] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:41:54,293] {logging_mixin.py:104} INFO - [2021-06-28 15:41:54,293] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:41:54,483] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:41:55,308] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:41:55,352] {logging_mixin.py:104} INFO - [2021-06-28 15:41:55,352] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:41:55,398] {logging_mixin.py:104} INFO - [2021-06-28 15:41:55,397] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:41:55,413] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.155 seconds
+[2021-06-28 15:42:25,664] {scheduler_job.py:182} INFO - Started process (PID=1108) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:42:25,666] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:42:25,668] {logging_mixin.py:104} INFO - [2021-06-28 15:42:25,667] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:42:25,767] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:42:26,415] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:42:26,441] {logging_mixin.py:104} INFO - [2021-06-28 15:42:26,441] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:42:26,472] {logging_mixin.py:104} INFO - [2021-06-28 15:42:26,472] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:42:26,486] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 0.827 seconds
+[2021-06-28 15:42:57,048] {scheduler_job.py:182} INFO - Started process (PID=1169) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:42:57,050] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:42:57,051] {logging_mixin.py:104} INFO - [2021-06-28 15:42:57,051] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:42:57,167] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:42:58,006] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:42:58,034] {logging_mixin.py:104} INFO - [2021-06-28 15:42:58,034] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:42:58,065] {logging_mixin.py:104} INFO - [2021-06-28 15:42:58,065] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:42:58,082] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.039 seconds
+[2021-06-28 15:43:28,579] {scheduler_job.py:182} INFO - Started process (PID=1235) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:43:28,581] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:43:28,583] {logging_mixin.py:104} INFO - [2021-06-28 15:43:28,582] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:43:28,711] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:43:29,968] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:43:30,005] {logging_mixin.py:104} INFO - [2021-06-28 15:43:30,005] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:43:30,043] {logging_mixin.py:104} INFO - [2021-06-28 15:43:30,043] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:43:30,062] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.488 seconds
+[2021-06-28 15:44:00,155] {scheduler_job.py:182} INFO - Started process (PID=1298) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:44:00,157] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:44:00,158] {logging_mixin.py:104} INFO - [2021-06-28 15:44:00,158] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:44:00,298] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:44:01,564] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:44:01,599] {logging_mixin.py:104} INFO - [2021-06-28 15:44:01,599] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:44:01,632] {logging_mixin.py:104} INFO - [2021-06-28 15:44:01,631] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:44:01,681] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.541 seconds
+[2021-06-28 15:44:32,402] {scheduler_job.py:182} INFO - Started process (PID=1358) to work on /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:44:32,404] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/analytics_summary.py for tasks to queue
+[2021-06-28 15:44:32,406] {logging_mixin.py:104} INFO - [2021-06-28 15:44:32,405] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:44:32,525] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-28 15:44:33,335] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/analytics_summary.py
+[2021-06-28 15:44:33,360] {logging_mixin.py:104} INFO - [2021-06-28 15:44:33,360] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-28 15:44:33,397] {logging_mixin.py:104} INFO - [2021-06-28 15:44:33,396] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-27 23:45:00+00:00
+[2021-06-28 15:44:33,471] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/analytics_summary.py took 1.073 seconds

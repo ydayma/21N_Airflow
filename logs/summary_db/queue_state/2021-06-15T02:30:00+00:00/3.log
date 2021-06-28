@@ -1,0 +1,97 @@
+[2021-06-16 13:23:25,966] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_state 2021-06-15T02:30:00+00:00 [queued]>
+[2021-06-16 13:23:26,039] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_state 2021-06-15T02:30:00+00:00 [queued]>
+[2021-06-16 13:23:26,040] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-16 13:23:26,040] {taskinstance.py:1068} INFO - Starting attempt 3 of 6
+[2021-06-16 13:23:26,040] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-16 13:23:26,106] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): queue_state> on 2021-06-15T02:30:00+00:00
+[2021-06-16 13:23:26,125] {standard_task_runner.py:52} INFO - Started process 2301 to run task
+[2021-06-16 13:23:26,130] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'queue_state', '2021-06-15T02:30:00+00:00', '--job-id', '257', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmp5gfamj6y', '--error-file', '/tmp/tmp9k_6qyle']
+[2021-06-16 13:23:26,130] {standard_task_runner.py:77} INFO - Job 257: Subtask queue_state
+[2021-06-16 13:23:26,241] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.queue_state 2021-06-15T02:30:00+00:00 [running]> on host ac3e7c1eb084
+[2021-06-16 13:23:26,496] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=queue_state
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-15T02:30:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-15T02:30:00+00:00
+[2021-06-16 13:23:26,498] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-16 13:23:34,302] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-16 13:23:37,181] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 148, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 236, in executemany
+    self._get_db().encoding,
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 261, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '30392529' for key 'PRIMARY'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 434, in queue_state
+    index=False)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/core/generic.py", line 2615, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 598, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1406, in to_sql
+    raise err
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1398, in to_sql
+    table.insert(chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 830, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 747, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 148, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 236, in executemany
+    self._get_db().encoding,
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 261, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.IntegrityError: (MySQLdb._exceptions.IntegrityError) (1062, "Duplicate entry '30392529' for key 'PRIMARY'")
+[SQL: INSERT INTO analytics.`21N_queue_state` (id, creationdate, queueid, active, state, state_status, service_status, ambassador_id, notes, requestedby, latitude, longitude, isaccepted, `Etd`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)]
+[parameters: ((30392529, datetime.datetime(2021, 6, 15, 18, 53, 32), 1637329, 0, 8, 1, 2, 859730, 'Updated from Ambassador App - Photograph at customer place', None, '28.6229992', '77.0789432', 0, None), (30392530, datetime.datetime(2021, 6, 15, 18, 53, 32), 1636437, 0, 6, 2, 2, 842249, 'Updated from Ambassador App - Covid Safety Photographs at Service Centre', None, '28.51792945', '77.28215545', 0, None), (30392531, datetime.datetime(2021, 6, 15, 18, 53, 32), 1637126, 0, 11, 0, 3, 861822, 'Updated from Ambassador App - Taking Signature', None, '26.92376221', '80.95080423', 1, None), (30392532, datetime.datetime(2021, 6, 15, 18, 53, 37), 1635916, 0, 12, 0, 3, 671016, 'Updated from Ambassador App Closed automatically- Service Centre Queues ', None, '18.52863113', '73.88017151', 0, None), (30392533, datetime.datetime(2021, 6, 15, 18, 53, 38), 1637732, 0, 48, 0, 0, 864920, 'Updated from Ambassador App ', None, '-6.3888302', '106.9446739', 0, None), (30392534, datetime.datetime(2021, 6, 15, 18, 53, 41), 1638240, 0, 4, 2, 0, 864421, 'Updated from Ambassador App - Taking Photos at Service Centre', None, '28.659848333333336', '77.14675166666666', 0, None), (30392535, datetime.datetime(2021, 6, 15, 18, 53, 46), 1638359, 0, 2, 2, 1, 851763, 'Updated from Ambassador App - Call Confirmation Pickup', None, '22.93619302', '72.59489903', 0, None), (30392536, datetime.datetime(2021, 6, 15, 18, 53, 46), 1636085, 0, 11, 0, 3, 819034, 'Updated from Ambassador App - Taking Signature', None, '28.70963166666667', '77.20489166666667', 1, None)  ... displaying 10 of 13895 total bound parameter sets ...  (30406575, datetime.datetime(2021, 6, 16, 10, 2, 18), 1638290, 0, 4, 1, 0, 865727, 'Updated from Ambassador App - On the way to Service Centre', None, '28.5088415', '77.199395', 0, None), (30406576, datetime.datetime(2021, 6, 16, 10, 2, 19), 1637457, 0, 4, 6, 0, 719016, 'Updated from Ambassador App - Covid Safety Photographs at Service Centre', None, '15.5450232', '73.8206041', 0, None))]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+[2021-06-16 13:23:37,255] {taskinstance.py:1531} INFO - Marking task as UP_FOR_RETRY. dag_id=summary_db, task_id=queue_state, execution_date=20210615T023000, start_date=20210616T132325, end_date=20210616T132337
+[2021-06-16 13:23:37,300] {local_task_job.py:151} INFO - Task exited with return code 1

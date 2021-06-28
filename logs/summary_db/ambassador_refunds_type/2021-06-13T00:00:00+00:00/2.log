@@ -1,0 +1,98 @@
+[2021-06-14 12:54:07,491] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_refunds_type 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:54:07,574] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_refunds_type 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:54:07,575] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:54:07,576] {taskinstance.py:1068} INFO - Starting attempt 2 of 2
+[2021-06-14 12:54:07,577] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:54:07,626] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): ambassador_refunds_type> on 2021-06-13T00:00:00+00:00
+[2021-06-14 12:54:07,643] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'ambassador_refunds_type', '2021-06-13T00:00:00+00:00', '--job-id', '59', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpo3p0dew6', '--error-file', '/tmp/tmp8kyqk2nv']
+[2021-06-14 12:54:07,645] {standard_task_runner.py:52} INFO - Started process 663 to run task
+[2021-06-14 12:54:07,656] {standard_task_runner.py:77} INFO - Job 59: Subtask ambassador_refunds_type
+[2021-06-14 12:54:07,840] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.ambassador_refunds_type 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 12:54:08,089] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=ambassador_refunds_type
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 12:54:08,092] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 12:54:09,818] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 12:54:10,000] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 181, in ambassador_refunds_type
+    index=False)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/core/generic.py", line 2615, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 598, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1393, in to_sql
+    table.create()
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 725, in create
+    self.pd_sql.drop_table(self.name, self.schema)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1453, in drop_table
+    self.meta.reflect(only=[table_name], schema=schema)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/sql/schema.py", line 4612, in reflect
+    "in %r%s: (%s)" % (bind.engine, s, ", ".join(missing))
+sqlalchemy.exc.InvalidRequestError: Could not reflect: requested table(s) not available in Engine(mysql://root:***@host.docker.internal:3306/21north) schema '21north': (21N_ambassador_refunds_type)
+[2021-06-14 12:54:10,055] {taskinstance.py:1531} INFO - Marking task as FAILED. dag_id=summary_db, task_id=ambassador_refunds_type, execution_date=20210613T000000, start_date=20210614T125407, end_date=20210614T125410
+[2021-06-14 12:54:10,595] {local_task_job.py:151} INFO - Task exited with return code 1
+[2021-06-14 15:33:13,743] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_refunds_type 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 15:33:13,816] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_refunds_type 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 15:33:13,816] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 15:33:13,816] {taskinstance.py:1068} INFO - Starting attempt 2 of 2
+[2021-06-14 15:33:13,817] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 15:33:13,870] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): ambassador_refunds_type> on 2021-06-13T00:00:00+00:00
+[2021-06-14 15:33:13,890] {standard_task_runner.py:52} INFO - Started process 1069 to run task
+[2021-06-14 15:33:13,913] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'ambassador_refunds_type', '2021-06-13T00:00:00+00:00', '--job-id', '97', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpeda8wewv', '--error-file', '/tmp/tmpbai_vjs1']
+[2021-06-14 15:33:13,914] {standard_task_runner.py:77} INFO - Job 97: Subtask ambassador_refunds_type
+[2021-06-14 15:33:14,078] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.ambassador_refunds_type 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 15:33:14,204] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=ambassador_refunds_type
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 15:33:14,206] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 15:33:16,148] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 15:33:16,316] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 183, in ambassador_refunds_type
+    index=False)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/core/generic.py", line 2615, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 598, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1393, in to_sql
+    table.create()
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 725, in create
+    self.pd_sql.drop_table(self.name, self.schema)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1453, in drop_table
+    self.meta.reflect(only=[table_name], schema=schema)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/sql/schema.py", line 4612, in reflect
+    "in %r%s: (%s)" % (bind.engine, s, ", ".join(missing))
+sqlalchemy.exc.InvalidRequestError: Could not reflect: requested table(s) not available in Engine(mysql://root:***@host.docker.internal:3306/21north) schema '21north': (21N_ambassador_refunds_type)
+[2021-06-14 15:33:16,335] {taskinstance.py:1531} INFO - Marking task as FAILED. dag_id=summary_db, task_id=ambassador_refunds_type, execution_date=20210613T000000, start_date=20210614T153313, end_date=20210614T153316
+[2021-06-14 15:33:16,419] {local_task_job.py:151} INFO - Task exited with return code 1

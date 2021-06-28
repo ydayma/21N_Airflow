@@ -1,0 +1,26 @@
+[2021-06-15 17:51:14,500] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_prepaid_list 2021-06-14T00:00:00+00:00 [queued]>
+[2021-06-15 17:51:14,611] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_prepaid_list 2021-06-14T00:00:00+00:00 [queued]>
+[2021-06-15 17:51:14,617] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-15 17:51:14,618] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-15 17:51:14,619] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-15 17:51:14,688] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): queue_prepaid_list> on 2021-06-14T00:00:00+00:00
+[2021-06-15 17:51:14,761] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'queue_prepaid_list', '2021-06-14T00:00:00+00:00', '--job-id', '144', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpiz4ybnwr', '--error-file', '/tmp/tmp_zj3w3_5']
+[2021-06-15 17:51:14,770] {standard_task_runner.py:77} INFO - Job 144: Subtask queue_prepaid_list
+[2021-06-15 17:51:14,696] {standard_task_runner.py:52} INFO - Started process 964 to run task
+[2021-06-15 17:51:15,301] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.queue_prepaid_list 2021-06-14T00:00:00+00:00 [running]> on host bb8bb196dd92
+[2021-06-15 17:51:15,661] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=queue_prepaid_list
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-14T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-14T00:00:00+00:00
+[2021-06-15 17:51:15,662] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-15 17:51:35,771] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-15 17:51:36,059] {logging_mixin.py:104} WARNING - /home/***/.local/lib/python3.6/site-packages/pandas/io/sql.py:1423 UserWarning: The provided table name '21N_queue_prepaid_list' is not found exactly as such in the database after writing the table, possibly due to case sensitivity issues. Consider using lower case table names.
+[2021-06-15 17:51:36,060] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-15 17:51:36,061] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-15 17:51:36,082] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=queue_prepaid_list, execution_date=20210614T000000, start_date=20210615T175114, end_date=20210615T175136
+[2021-06-15 17:51:36,135] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-15 17:51:36,157] {local_task_job.py:151} INFO - Task exited with return code 0

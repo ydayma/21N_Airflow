@@ -1,0 +1,50 @@
+[2021-06-28 15:20:01,617] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_bills_due 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:20:01,797] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_bills_due 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:20:01,798] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:20:01,798] {taskinstance.py:1068} INFO - Starting attempt 1 of 4
+[2021-06-28 15:20:01,799] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:20:01,855] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): queue_bills_due> on 2021-06-26T23:45:00+00:00
+[2021-06-28 15:20:01,898] {standard_task_runner.py:52} INFO - Started process 301 to run task
+[2021-06-28 15:20:02,050] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'queue_bills_due', '2021-06-26T23:45:00+00:00', '--job-id', '277', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/analytics_summary.py', '--cfg-path', '/tmp/tmprv5z1gog', '--error-file', '/tmp/tmpw6gcls49']
+[2021-06-28 15:20:02,051] {standard_task_runner.py:77} INFO - Job 277: Subtask queue_bills_due
+[2021-06-28 15:20:02,703] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.queue_bills_due 2021-06-26T23:45:00+00:00 [running]> on host 32c9461fc328
+[2021-06-28 15:20:03,123] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=queue_bills_due
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-26T23:45:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-26T23:45:00+00:00
+[2021-06-28 15:20:03,124] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-28 15:20:05,160] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-28 15:20:07,598] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-28 15:20:07,598] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-28 15:20:07,868] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=queue_bills_due, execution_date=20210626T234500, start_date=20210628T152001, end_date=20210628T152007
+[2021-06-28 15:20:08,854] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-28 15:20:08,916] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-06-28 15:38:58,410] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_bills_due 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:38:58,453] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_bills_due 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:38:58,453] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:38:58,453] {taskinstance.py:1068} INFO - Starting attempt 1 of 4
+[2021-06-28 15:38:58,454] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:38:58,471] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): queue_bills_due> on 2021-06-26T23:45:00+00:00
+[2021-06-28 15:38:58,479] {standard_task_runner.py:52} INFO - Started process 351 to run task
+[2021-06-28 15:38:58,484] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'queue_bills_due', '2021-06-26T23:45:00+00:00', '--job-id', '309', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/analytics_summary.py', '--cfg-path', '/tmp/tmpv45r_mag', '--error-file', '/tmp/tmpm1u9_ur5']
+[2021-06-28 15:38:58,485] {standard_task_runner.py:77} INFO - Job 309: Subtask queue_bills_due
+[2021-06-28 15:38:58,571] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.queue_bills_due 2021-06-26T23:45:00+00:00 [running]> on host 32c9461fc328
+[2021-06-28 15:38:58,671] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=queue_bills_due
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-26T23:45:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-26T23:45:00+00:00
+[2021-06-28 15:38:58,673] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-28 15:39:00,511] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-28 15:39:02,413] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-28 15:39:02,414] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-28 15:39:02,434] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=queue_bills_due, execution_date=20210626T234500, start_date=20210628T153858, end_date=20210628T153902
+[2021-06-28 15:39:02,501] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-28 15:39:02,539] {local_task_job.py:151} INFO - Task exited with return code 0

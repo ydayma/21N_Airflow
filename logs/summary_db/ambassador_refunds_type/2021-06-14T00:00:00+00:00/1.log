@@ -1,0 +1,25 @@
+[2021-06-15 17:51:10,094] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_refunds_type 2021-06-14T00:00:00+00:00 [queued]>
+[2021-06-15 17:51:10,328] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_refunds_type 2021-06-14T00:00:00+00:00 [queued]>
+[2021-06-15 17:51:10,328] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-15 17:51:10,329] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-15 17:51:10,329] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-15 17:51:10,459] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): ambassador_refunds_type> on 2021-06-14T00:00:00+00:00
+[2021-06-15 17:51:10,545] {standard_task_runner.py:52} INFO - Started process 952 to run task
+[2021-06-15 17:51:10,594] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'ambassador_refunds_type', '2021-06-14T00:00:00+00:00', '--job-id', '139', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmp78chph0w', '--error-file', '/tmp/tmpbu5j56u2']
+[2021-06-15 17:51:10,595] {standard_task_runner.py:77} INFO - Job 139: Subtask ambassador_refunds_type
+[2021-06-15 17:51:11,313] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.ambassador_refunds_type 2021-06-14T00:00:00+00:00 [running]> on host bb8bb196dd92
+[2021-06-15 17:51:11,978] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=ambassador_refunds_type
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-14T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-14T00:00:00+00:00
+[2021-06-15 17:51:11,984] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-15 17:51:14,211] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-15 17:51:23,307] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-15 17:51:23,308] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-15 17:51:23,476] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=ambassador_refunds_type, execution_date=20210614T000000, start_date=20210615T175110, end_date=20210615T175123
+[2021-06-15 17:51:24,118] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-15 17:51:24,224] {local_task_job.py:151} INFO - Task exited with return code 0

@@ -1,0 +1,78 @@
+[2021-06-14 12:49:17,726] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.servicecentre_invoices 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:49:17,927] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.servicecentre_invoices 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:49:17,928] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:49:17,929] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 12:49:17,929] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:49:17,975] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): servicecentre_invoices> on 2021-06-13T00:00:00+00:00
+[2021-06-14 12:49:18,054] {standard_task_runner.py:52} INFO - Started process 411 to run task
+[2021-06-14 12:49:18,106] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'servicecentre_invoices', '2021-06-13T00:00:00+00:00', '--job-id', '53', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmp5zc6xp2k', '--error-file', '/tmp/tmpiuebyvu1']
+[2021-06-14 12:49:18,126] {standard_task_runner.py:77} INFO - Job 53: Subtask servicecentre_invoices
+[2021-06-14 12:49:18,426] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.servicecentre_invoices 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 12:49:19,004] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=servicecentre_invoices
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 12:49:19,012] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 12:49:28,892] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 12:49:28,982] {logging_mixin.py:104} WARNING - /home/***/.local/lib/python3.6/site-packages/pandas/io/sql.py:1423 UserWarning: The provided table name '21N_servicecentre_invoices' is not found exactly as such in the database after writing the table, possibly due to case sensitivity issues. Consider using lower case table names.
+[2021-06-14 12:49:28,982] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-14 12:49:28,982] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-14 12:49:29,000] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=servicecentre_invoices, execution_date=20210613T000000, start_date=20210614T124917, end_date=20210614T124929
+[2021-06-14 12:49:29,045] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-14 12:49:29,071] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-06-14 15:28:33,239] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.servicecentre_invoices 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 15:28:33,982] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.servicecentre_invoices 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 15:28:33,983] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 15:28:33,983] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 15:28:33,983] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 15:28:34,271] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): servicecentre_invoices> on 2021-06-13T00:00:00+00:00
+[2021-06-14 15:28:34,459] {standard_task_runner.py:52} INFO - Started process 841 to run task
+[2021-06-14 15:28:34,714] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'servicecentre_invoices', '2021-06-13T00:00:00+00:00', '--job-id', '92', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpe1zbvzx_', '--error-file', '/tmp/tmp91cn4kaa']
+[2021-06-14 15:28:34,824] {standard_task_runner.py:77} INFO - Job 92: Subtask servicecentre_invoices
+[2021-06-14 15:28:35,869] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.servicecentre_invoices 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 15:28:36,682] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=servicecentre_invoices
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 15:28:36,685] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 15:28:45,887] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 15:28:46,577] {logging_mixin.py:104} WARNING - /home/***/.local/lib/python3.6/site-packages/pandas/io/sql.py:1423 UserWarning: The provided table name '21N_servicecentre_invoices' is not found exactly as such in the database after writing the table, possibly due to case sensitivity issues. Consider using lower case table names.
+[2021-06-14 15:28:46,578] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-14 15:28:46,578] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-14 15:28:46,669] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=servicecentre_invoices, execution_date=20210613T000000, start_date=20210614T152833, end_date=20210614T152846
+[2021-06-14 15:28:46,930] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-14 15:28:46,987] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-06-14 18:34:40,802] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.servicecentre_invoices 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 18:34:40,903] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.servicecentre_invoices 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 18:34:40,903] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 18:34:40,904] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 18:34:40,904] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 18:34:40,946] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): servicecentre_invoices> on 2021-06-13T00:00:00+00:00
+[2021-06-14 18:34:41,012] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'servicecentre_invoices', '2021-06-13T00:00:00+00:00', '--job-id', '125', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpj8x0wn07', '--error-file', '/tmp/tmp5ei8sytz']
+[2021-06-14 18:34:41,013] {standard_task_runner.py:77} INFO - Job 125: Subtask servicecentre_invoices
+[2021-06-14 18:34:40,985] {standard_task_runner.py:52} INFO - Started process 308 to run task
+[2021-06-14 18:34:41,468] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.servicecentre_invoices 2021-06-13T00:00:00+00:00 [running]> on host 89c270a4555f
+[2021-06-14 18:34:41,692] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=servicecentre_invoices
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 18:34:41,694] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 18:34:58,847] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 18:34:59,167] {logging_mixin.py:104} WARNING - /home/***/.local/lib/python3.6/site-packages/pandas/io/sql.py:1423 UserWarning: The provided table name '21N_servicecentre_invoices' is not found exactly as such in the database after writing the table, possibly due to case sensitivity issues. Consider using lower case table names.
+[2021-06-14 18:34:59,167] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-14 18:34:59,169] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-14 18:34:59,222] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=servicecentre_invoices, execution_date=20210613T000000, start_date=20210614T183440, end_date=20210614T183459
+[2021-06-14 18:34:59,365] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-14 18:34:59,400] {local_task_job.py:151} INFO - Task exited with return code 0

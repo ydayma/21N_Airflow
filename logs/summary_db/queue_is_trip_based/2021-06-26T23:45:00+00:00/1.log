@@ -1,0 +1,50 @@
+[2021-06-28 15:20:22,409] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_is_trip_based 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:20:22,524] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_is_trip_based 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:20:22,526] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:20:22,531] {taskinstance.py:1068} INFO - Starting attempt 1 of 4
+[2021-06-28 15:20:22,532] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:20:22,590] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): queue_is_trip_based> on 2021-06-26T23:45:00+00:00
+[2021-06-28 15:20:22,611] {standard_task_runner.py:52} INFO - Started process 340 to run task
+[2021-06-28 15:20:22,649] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'queue_is_trip_based', '2021-06-26T23:45:00+00:00', '--job-id', '291', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/analytics_summary.py', '--cfg-path', '/tmp/tmp25uatz5m', '--error-file', '/tmp/tmpvg0mat5a']
+[2021-06-28 15:20:22,650] {standard_task_runner.py:77} INFO - Job 291: Subtask queue_is_trip_based
+[2021-06-28 15:20:22,886] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.queue_is_trip_based 2021-06-26T23:45:00+00:00 [running]> on host 32c9461fc328
+[2021-06-28 15:20:23,273] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=queue_is_trip_based
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-26T23:45:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-26T23:45:00+00:00
+[2021-06-28 15:20:23,274] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-28 15:20:25,412] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-28 15:20:27,167] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-28 15:20:27,168] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-28 15:20:27,232] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=queue_is_trip_based, execution_date=20210626T234500, start_date=20210628T152022, end_date=20210628T152027
+[2021-06-28 15:20:27,404] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-28 15:20:27,453] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-06-28 15:39:25,857] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_is_trip_based 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:39:25,887] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_is_trip_based 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:39:25,887] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:39:25,888] {taskinstance.py:1068} INFO - Starting attempt 1 of 4
+[2021-06-28 15:39:25,888] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:39:25,900] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): queue_is_trip_based> on 2021-06-26T23:45:00+00:00
+[2021-06-28 15:39:25,907] {standard_task_runner.py:52} INFO - Started process 379 to run task
+[2021-06-28 15:39:25,914] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'queue_is_trip_based', '2021-06-26T23:45:00+00:00', '--job-id', '313', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/analytics_summary.py', '--cfg-path', '/tmp/tmp9t9cowe_', '--error-file', '/tmp/tmpbf4jf5ou']
+[2021-06-28 15:39:25,915] {standard_task_runner.py:77} INFO - Job 313: Subtask queue_is_trip_based
+[2021-06-28 15:39:25,980] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.queue_is_trip_based 2021-06-26T23:45:00+00:00 [running]> on host 32c9461fc328
+[2021-06-28 15:39:26,066] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=queue_is_trip_based
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-26T23:45:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-26T23:45:00+00:00
+[2021-06-28 15:39:26,067] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-28 15:39:33,366] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-28 15:39:35,060] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-28 15:39:35,061] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-28 15:39:35,081] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=queue_is_trip_based, execution_date=20210626T234500, start_date=20210628T153925, end_date=20210628T153935
+[2021-06-28 15:39:35,120] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-28 15:39:35,151] {local_task_job.py:151} INFO - Task exited with return code 0

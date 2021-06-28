@@ -1,0 +1,71 @@
+[2021-06-16 13:23:07,308] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_state 2021-06-15T02:30:00+00:00 [queued]>
+[2021-06-16 13:23:07,556] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_state 2021-06-15T02:30:00+00:00 [queued]>
+[2021-06-16 13:23:07,556] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-16 13:23:07,557] {taskinstance.py:1068} INFO - Starting attempt 2 of 4
+[2021-06-16 13:23:07,557] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-16 13:23:07,687] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): queue_state> on 2021-06-15T02:30:00+00:00
+[2021-06-16 13:23:07,699] {standard_task_runner.py:52} INFO - Started process 2286 to run task
+[2021-06-16 13:23:07,724] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'queue_state', '2021-06-15T02:30:00+00:00', '--job-id', '256', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpqsammey8', '--error-file', '/tmp/tmpzllhgi5d']
+[2021-06-16 13:23:07,725] {standard_task_runner.py:77} INFO - Job 256: Subtask queue_state
+[2021-06-16 13:23:08,011] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.queue_state 2021-06-15T02:30:00+00:00 [running]> on host ac3e7c1eb084
+[2021-06-16 13:23:08,244] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=queue_state
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-15T02:30:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-15T02:30:00+00:00
+[2021-06-16 13:23:08,245] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-16 13:23:12,881] {local_task_job.py:197} WARNING - State of this instance has been externally set to shutdown. Terminating instance.
+[2021-06-16 13:23:12,887] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 2286
+[2021-06-16 13:23:16,203] {taskinstance.py:1264} ERROR - Received SIGTERM. Terminating subprocesses.
+[2021-06-16 13:23:16,390] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 425, in queue_state
+    con='mysql+mysqldb://'+REPLICA_DB_USER+':'+REPLICA_DB_PASSWORD+'@'+REPLICA_DB_HOST+':'+REPLICA_DB_PORT+'/'+REPLICA_DB+'?ssl_mode=DISABLED')
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 383, in read_sql_query
+    chunksize=chunksize,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1295, in read_query
+    result = self.execute(*args)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1162, in execute
+    *args, **kwargs
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2235, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1003, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1178, in _execute_text
+    parameters,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1514, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1267, in _execute_context
+    cursor, statement, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 611, in do_execute_no_params
+    cursor.execute(statement)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 320, in _query
+    self._do_get_result(db)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 145, in _do_get_result
+    self._result = result = self._get_result()
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 352, in _get_result
+    return self._get_db().store_result()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1266, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2021-06-16 13:23:16,394] {taskinstance.py:1531} INFO - Marking task as UP_FOR_RETRY. dag_id=summary_db, task_id=queue_state, execution_date=20210615T023000, start_date=20210616T132307, end_date=20210616T132316
+[2021-06-16 13:23:16,464] {process_utils.py:66} INFO - Process psutil.Process(pid=2286, status='terminated', exitcode=1, started='13:23:07') (2286) terminated with exit code 1

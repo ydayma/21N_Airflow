@@ -1,0 +1,97 @@
+[2021-06-14 12:54:25,229] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.servicecentre 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:54:25,311] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.servicecentre 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:54:25,311] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:54:25,311] {taskinstance.py:1068} INFO - Starting attempt 2 of 2
+[2021-06-14 12:54:25,312] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:54:25,333] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): servicecentre> on 2021-06-13T00:00:00+00:00
+[2021-06-14 12:54:25,350] {standard_task_runner.py:52} INFO - Started process 678 to run task
+[2021-06-14 12:54:25,361] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'servicecentre', '2021-06-13T00:00:00+00:00', '--job-id', '66', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmplqt1ffj1', '--error-file', '/tmp/tmp3qt586lk']
+[2021-06-14 12:54:25,361] {standard_task_runner.py:77} INFO - Job 66: Subtask servicecentre
+[2021-06-14 12:54:25,472] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.servicecentre 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 12:54:25,599] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=servicecentre
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 12:54:25,604] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 12:54:27,389] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 12:54:27,767] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 148, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 236, in executemany
+    self._get_db().encoding,
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 266, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1054, "Unknown column 'premium_status' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 466, in servicecentre
+    index=False)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/core/generic.py", line 2615, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 598, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1406, in to_sql
+    raise err
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1398, in to_sql
+    table.insert(chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 830, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 747, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 148, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 236, in executemany
+    self._get_db().encoding,
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 266, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (1054, "Unknown column 'premium_status' in 'field list'")
+[SQL: INSERT INTO `21north`.`21N_servicecentre` (id, creationdate, masterid, cityid, carmakesid, name, address1, address2, svclat, svclong, pincode, open, close, days, manager_name, manager_mobile, manager_email, manager_password, bank_name, bank_address1, bank_address2, bank_city, bank_pincode, bank_account_name, bank_account_number, bank_ifsc_code, bank_account_type, short, `status`, rating, singlepointcontact, spctwo, newinterface, issundayworking, servicecentretype, implant, capacity, potential, typeofshop, isauthorised, istwowheeler, visitingday, country, isinsurance, ismanufacturer, svc_code, region_code, state_code, dealer_code, state_name, stop_task_radius, is_prepaid, inceptiondate, is_trip_based, is_blacklisted, premium_status, slot_slab) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)]
+[parameters: ((2301, datetime.datetime(2021, 6, 14, 10, 5, 15), 816, 200, 13, 'MGM WULING KARAWACI', 'Jl. Imam Bonjol No.10, RT.001/RW.009, Panunggangan', 'Cibodas, Kota Tangerang, Banten 15138', -6.2033161, 106.6190244, 15138, '8:00', '8:00', None, None, None, None, None, 'BCA Bank', 'Sunter', None, None, '12345', 'PT. Maju Global Motor', '0451000208', '123456', 'CA', None, 1, 5.0, None, None, 0, 0, 0, None, 100, 20, 3, 1, 2, 2, 91, 0, 0, 'WC', 'WRC', '62', '1234', 'JAKA', 0.5, 1, datetime.date(2019, 1, 1), 1, 0, 0, 400), (2302, datetime.datetime(2021, 6, 14, 10, 8, 4), 816, 200, 7, 'MGM WULING PONDOK GEDE', 'Jl. Raya Pd. Gede No.12, RW.8, Lubang Buaya, Kec.', '`Timur, Daerah Khusus Ibukota Jakarta 13810', -6.285152, 106.9010632, 13810, '8:00', '8:00', None, None, None, None, None, 'BCA Bank', 'Sunter', None, None, '12345', 'PT. Maju Global Motor', '0451000208', '12345', 'CA', None, 1, 5.0, None, None, 0, 0, 0, None, 100, 20, 3, 1, 2, 2, 91, 0, 0, 'WC', 'WRC', '62', '12345', 'JAKAR', 0.5, 1, datetime.date(2019, 1, 1), 1, 0, 0, 300), (2303, datetime.datetime(2021, 6, 14, 10, 32, 2), 833, 200, 8, 'WRAPSTATION', 'Ruko Mendrisio 2 Blok B No. 05 - 06, Gading Serpon', 'Ruko Mendrisio 2 Blok B No. 05 - 06, Gading Serpon', -6.2617269, 106.6318577, 158100, '8:00', '8:00', None, None, None, None, None, 'BCA Bank', 'Serpong', None, None, '123456', 'Ricky Fernando', '1192130284', '123456', 'CA', None, 1, 5.0, None, None, 0, 0, 0, None, 1000, 20, 3, 1, 2, 2, 91, 0, 0, 'WC', 'WRC', '62', '1234', 'JAKAR', 0.5, 1, datetime.date(2019, 1, 1), 1, 0, 0, 300), (2304, datetime.datetime(2021, 6, 14, 11, 49, 38), 389, 149, 19, 'CAR DOCTOR', 'PLOT NO 1 SEC-85 NEAR SHRI RAM MILLENIUM SCHOOL GR', 'GREATOR FARIDABAD', 28.3993808, 77.3502828, 121002, '8:00', '8:00', None, None, None, None, None, 'ICICI BANK', 'SAINI ENCLAVE KARKARDUMA', None, None, '110092', 'Revfix tech private limited', '430505000134', 'ICIC0004305', 'CA', None, 1, 5.0, None, None, 0, 0, 0, None, 100, 20, 3, 1, 2, 2, 91, 0, 0, 'WC', 'WRC', '06', '1234', 'DELHI', 0.5, 1, datetime.date(2019, 1, 1), 1, 0, 0, 300), (2305, datetime.datetime(2021, 6, 14, 11, 52, 44), 389, 147, 21, 'AAHNA  NOIDA', 'A-3 SECtor 63 NOIDA', 'A-3 SECtor 63 NOIDA', 28.6249643, 77.3807572, 201301, '8:00', '8:00', None, None, None, None, None, 'ICICI BANK', 'SAINI ENCLAVE KARKARDUMA', None, None, '110092', 'Revfix tech private limited', '430505000134', 'ICIC0004305', 'CA', None, 1, 5.0, None, None, 0, 0, 0, None, 100, 20, 3, 1, 2, 2, 91, 0, 0, 'WC', 'WRC', '06', '1234', 'DELHI', 0.5, 1, datetime.date(2019, 1, 1), 1, 0, 0, 300))]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+[2021-06-14 12:54:27,799] {taskinstance.py:1531} INFO - Marking task as FAILED. dag_id=summary_db, task_id=servicecentre, execution_date=20210613T000000, start_date=20210614T125425, end_date=20210614T125427
+[2021-06-14 12:54:27,875] {local_task_job.py:151} INFO - Task exited with return code 1

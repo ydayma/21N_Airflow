@@ -1,0 +1,97 @@
+[2021-06-14 12:54:12,204] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_channel_partner_comission 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:54:12,387] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_channel_partner_comission 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:54:12,394] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:54:12,395] {taskinstance.py:1068} INFO - Starting attempt 2 of 2
+[2021-06-14 12:54:12,395] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:54:12,603] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): ambassador_channel_partner_comission> on 2021-06-13T00:00:00+00:00
+[2021-06-14 12:54:12,637] {standard_task_runner.py:52} INFO - Started process 670 to run task
+[2021-06-14 12:54:12,711] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'ambassador_channel_partner_comission', '2021-06-13T00:00:00+00:00', '--job-id', '63', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpnkuozh20', '--error-file', '/tmp/tmpuvvsh3zm']
+[2021-06-14 12:54:12,714] {standard_task_runner.py:77} INFO - Job 63: Subtask ambassador_channel_partner_comission
+[2021-06-14 12:54:13,036] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.ambassador_channel_partner_comission 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 12:54:13,515] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=ambassador_channel_partner_comission
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 12:54:13,516] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 12:54:16,591] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 12:54:17,035] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 148, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 236, in executemany
+    self._get_db().encoding,
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 261, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '1699992' for key '21n_ambassador_channel_partner_comission.PRIMARY'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 30, in ambassador_channel_partner_comission
+    index=False)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/core/generic.py", line 2615, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 598, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1406, in to_sql
+    raise err
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1398, in to_sql
+    table.insert(chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 830, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 747, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 148, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 236, in executemany
+    self._get_db().encoding,
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 261, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.IntegrityError: (MySQLdb._exceptions.IntegrityError) (1062, "Duplicate entry '1699992' for key '21n_ambassador_channel_partner_comission.PRIMARY'")
+[SQL: INSERT INTO `21north`.`21N_ambassador_channel_partner_comission` (id, creationdate, channel_partner_id, ambid, queueid, state, amount, tmpamount, reason, taskcount, channel_comission, settled, settled_by, settlement_datetime) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)]
+[parameters: ((1699992, datetime.datetime(2021, 6, 13, 18, 24, 38), 74, 175244, 1634178, 111, 0.0, 0, None, 0.0, 0.0, 0, None, None), (1699993, datetime.datetime(2021, 6, 13, 18, 24, 38), 64, 705742, 1634814, 802, 0.0, 0, None, 2.0, 0.0, 0, None, None), (1699994, datetime.datetime(2021, 6, 13, 18, 24, 41), 47, 590682, 1633765, 802, 0.0, 0, None, 1.0, 0.0, 0, None, None), (1699995, datetime.datetime(2021, 6, 13, 18, 24, 59), 170, 619991, 1633854, 802, 0.0, 0, None, 2.0, 0.0, 0, None, None), (1699996, datetime.datetime(2021, 6, 13, 18, 25, 12), 160, 808972, 1633524, 802, 0.0, 0, None, 1.0, 0.0, 0, None, None), (1699997, datetime.datetime(2021, 6, 13, 18, 25, 23), 74, 156475, 1634049, 802, 0.0, 0, None, 1.0, 0.0, 0, None, None), (1699998, datetime.datetime(2021, 6, 13, 18, 25, 42), 140, 263019, 1633665, 802, 0.0, 0, None, 1.0, 0.0, 0, None, None), (1699999, datetime.datetime(2021, 6, 13, 18, 25, 43), 64, 786514, 1632021, 802, 0.0, 0, None, 1.0, 0.0, 0, None, None)  ... displaying 10 of 1709 total bound parameter sets ...  (1701709, datetime.datetime(2021, 6, 14, 14, 37, 23), 140, 793862, 1631731, 802, 0.0, 0, None, 1.0, 0.0, 0, None, None), (1701710, datetime.datetime(2021, 6, 14, 14, 39, 16), 113, 233122, 1635786, 4600, 0.0, 0, None, 1.0, 0.0, 0, None, None))]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+[2021-06-14 12:54:17,066] {taskinstance.py:1531} INFO - Marking task as FAILED. dag_id=summary_db, task_id=ambassador_channel_partner_comission, execution_date=20210613T000000, start_date=20210614T125412, end_date=20210614T125417
+[2021-06-14 12:54:17,171] {local_task_job.py:151} INFO - Task exited with return code 1

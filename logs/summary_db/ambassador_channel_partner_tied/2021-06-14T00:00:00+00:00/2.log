@@ -1,0 +1,25 @@
+[2021-06-15 18:00:57,996] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_channel_partner_tied 2021-06-14T00:00:00+00:00 [queued]>
+[2021-06-15 18:00:58,018] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_channel_partner_tied 2021-06-14T00:00:00+00:00 [queued]>
+[2021-06-15 18:00:58,018] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-15 18:00:58,019] {taskinstance.py:1068} INFO - Starting attempt 2 of 3
+[2021-06-15 18:00:58,019] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-15 18:00:58,038] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): ambassador_channel_partner_tied> on 2021-06-14T00:00:00+00:00
+[2021-06-15 18:00:58,048] {standard_task_runner.py:52} INFO - Started process 1469 to run task
+[2021-06-15 18:00:58,053] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'ambassador_channel_partner_tied', '2021-06-14T00:00:00+00:00', '--job-id', '152', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmp2v8zpzta', '--error-file', '/tmp/tmptsm0_z88']
+[2021-06-15 18:00:58,053] {standard_task_runner.py:77} INFO - Job 152: Subtask ambassador_channel_partner_tied
+[2021-06-15 18:00:58,131] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.ambassador_channel_partner_tied 2021-06-14T00:00:00+00:00 [running]> on host bb8bb196dd92
+[2021-06-15 18:00:58,199] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=ambassador_channel_partner_tied
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-14T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-14T00:00:00+00:00
+[2021-06-15 18:00:58,199] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-15 18:01:00,671] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-15 18:01:01,644] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-15 18:01:01,644] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-15 18:01:01,658] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=ambassador_channel_partner_tied, execution_date=20210614T000000, start_date=20210615T180058, end_date=20210615T180101
+[2021-06-15 18:01:01,708] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-15 18:01:01,725] {local_task_job.py:151} INFO - Task exited with return code 0

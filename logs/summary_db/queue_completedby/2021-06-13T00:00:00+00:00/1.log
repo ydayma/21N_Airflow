@@ -1,0 +1,78 @@
+[2021-06-14 12:48:59,856] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_completedby 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:49:00,224] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_completedby 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:49:00,224] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:49:00,225] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 12:49:00,226] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:49:00,310] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): queue_completedby> on 2021-06-13T00:00:00+00:00
+[2021-06-14 12:49:00,486] {standard_task_runner.py:52} INFO - Started process 377 to run task
+[2021-06-14 12:49:00,542] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'queue_completedby', '2021-06-13T00:00:00+00:00', '--job-id', '42', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmp4wvbjc9w', '--error-file', '/tmp/tmppk34dh8s']
+[2021-06-14 12:49:00,542] {standard_task_runner.py:77} INFO - Job 42: Subtask queue_completedby
+[2021-06-14 12:49:01,353] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.queue_completedby 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 12:49:01,904] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=queue_completedby
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 12:49:01,905] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 12:49:08,277] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 12:49:11,406] {logging_mixin.py:104} WARNING - /home/***/.local/lib/python3.6/site-packages/pandas/io/sql.py:1423 UserWarning: The provided table name '21N_queue_completedby' is not found exactly as such in the database after writing the table, possibly due to case sensitivity issues. Consider using lower case table names.
+[2021-06-14 12:49:11,428] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-14 12:49:11,430] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-14 12:49:11,537] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=queue_completedby, execution_date=20210613T000000, start_date=20210614T124859, end_date=20210614T124911
+[2021-06-14 12:49:11,857] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-14 12:49:12,095] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-06-14 15:28:08,287] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_completedby 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 15:28:08,736] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_completedby 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 15:28:08,736] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 15:28:08,736] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 15:28:08,736] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 15:28:09,047] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): queue_completedby> on 2021-06-13T00:00:00+00:00
+[2021-06-14 15:28:09,134] {standard_task_runner.py:52} INFO - Started process 804 to run task
+[2021-06-14 15:28:09,254] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'queue_completedby', '2021-06-13T00:00:00+00:00', '--job-id', '84', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpxfgsc7rq', '--error-file', '/tmp/tmptq1j3gca']
+[2021-06-14 15:28:09,255] {standard_task_runner.py:77} INFO - Job 84: Subtask queue_completedby
+[2021-06-14 15:28:09,708] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.queue_completedby 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 15:28:10,014] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=queue_completedby
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 15:28:10,017] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 15:28:13,704] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 15:28:17,516] {logging_mixin.py:104} WARNING - /home/***/.local/lib/python3.6/site-packages/pandas/io/sql.py:1423 UserWarning: The provided table name '21N_queue_completedby' is not found exactly as such in the database after writing the table, possibly due to case sensitivity issues. Consider using lower case table names.
+[2021-06-14 15:28:17,524] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-14 15:28:17,539] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-14 15:28:17,631] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=queue_completedby, execution_date=20210613T000000, start_date=20210614T152808, end_date=20210614T152817
+[2021-06-14 15:28:17,995] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-14 15:28:18,435] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-06-14 18:33:53,575] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_completedby 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 18:33:53,876] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_completedby 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 18:33:53,888] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 18:33:53,888] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-14 18:33:53,888] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 18:33:54,015] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): queue_completedby> on 2021-06-13T00:00:00+00:00
+[2021-06-14 18:33:54,330] {standard_task_runner.py:52} INFO - Started process 252 to run task
+[2021-06-14 18:33:54,578] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'queue_completedby', '2021-06-13T00:00:00+00:00', '--job-id', '108', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpc3ib4mib', '--error-file', '/tmp/tmpsn0e6ayp']
+[2021-06-14 18:33:54,579] {standard_task_runner.py:77} INFO - Job 108: Subtask queue_completedby
+[2021-06-14 18:33:55,842] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.queue_completedby 2021-06-13T00:00:00+00:00 [running]> on host 89c270a4555f
+[2021-06-14 18:33:57,303] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=queue_completedby
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 18:33:57,327] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 18:34:13,064] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 18:34:16,913] {logging_mixin.py:104} WARNING - /home/***/.local/lib/python3.6/site-packages/pandas/io/sql.py:1423 UserWarning: The provided table name '21N_queue_completedby' is not found exactly as such in the database after writing the table, possibly due to case sensitivity issues. Consider using lower case table names.
+[2021-06-14 18:34:16,975] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-14 18:34:16,975] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-14 18:34:17,081] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=queue_completedby, execution_date=20210613T000000, start_date=20210614T183353, end_date=20210614T183417
+[2021-06-14 18:34:17,901] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-14 18:34:17,954] {local_task_job.py:151} INFO - Task exited with return code 0

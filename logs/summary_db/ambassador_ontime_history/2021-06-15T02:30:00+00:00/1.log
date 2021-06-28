@@ -1,0 +1,25 @@
+[2021-06-16 13:15:58,590] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_ontime_history 2021-06-15T02:30:00+00:00 [queued]>
+[2021-06-16 13:16:09,754] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.ambassador_ontime_history 2021-06-15T02:30:00+00:00 [queued]>
+[2021-06-16 13:16:09,754] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-16 13:16:09,754] {taskinstance.py:1068} INFO - Starting attempt 1 of 4
+[2021-06-16 13:16:09,754] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-16 13:16:20,262] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): ambassador_ontime_history> on 2021-06-15T02:30:00+00:00
+[2021-06-16 13:16:20,334] {standard_task_runner.py:52} INFO - Started process 1942 to run task
+[2021-06-16 13:16:25,329] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'ambassador_ontime_history', '2021-06-15T02:30:00+00:00', '--job-id', '226', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmp90hkbreu', '--error-file', '/tmp/tmpkor_715g']
+[2021-06-16 13:16:25,329] {standard_task_runner.py:77} INFO - Job 226: Subtask ambassador_ontime_history
+[2021-06-16 13:16:38,085] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.ambassador_ontime_history 2021-06-15T02:30:00+00:00 [running]> on host ac3e7c1eb084
+[2021-06-16 13:17:03,346] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=ambassador_ontime_history
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-15T02:30:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-15T02:30:00+00:00
+[2021-06-16 13:17:03,347] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-16 13:18:08,170] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-16 13:18:10,530] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-16 13:18:10,530] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-16 13:18:10,605] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=ambassador_ontime_history, execution_date=20210615T023000, start_date=20210616T131558, end_date=20210616T131810
+[2021-06-16 13:18:10,761] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-16 13:18:10,805] {local_task_job.py:151} INFO - Task exited with return code 0

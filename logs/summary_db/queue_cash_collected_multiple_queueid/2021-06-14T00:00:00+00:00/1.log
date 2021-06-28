@@ -1,0 +1,26 @@
+[2021-06-15 17:51:07,195] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_cash_collected_multiple_queueid 2021-06-14T00:00:00+00:00 [queued]>
+[2021-06-15 17:51:07,432] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.queue_cash_collected_multiple_queueid 2021-06-14T00:00:00+00:00 [queued]>
+[2021-06-15 17:51:07,432] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-15 17:51:07,432] {taskinstance.py:1068} INFO - Starting attempt 1 of 2
+[2021-06-15 17:51:07,433] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-15 17:51:07,803] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): queue_cash_collected_multiple_queueid> on 2021-06-14T00:00:00+00:00
+[2021-06-15 17:51:08,053] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'queue_cash_collected_multiple_queueid', '2021-06-14T00:00:00+00:00', '--job-id', '137', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpq_o39nxp', '--error-file', '/tmp/tmpn4yf927t']
+[2021-06-15 17:51:08,054] {standard_task_runner.py:77} INFO - Job 137: Subtask queue_cash_collected_multiple_queueid
+[2021-06-15 17:51:08,197] {standard_task_runner.py:52} INFO - Started process 950 to run task
+[2021-06-15 17:51:09,243] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.queue_cash_collected_multiple_queueid 2021-06-14T00:00:00+00:00 [running]> on host bb8bb196dd92
+[2021-06-15 17:51:10,210] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=queue_cash_collected_multiple_queueid
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-14T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-14T00:00:00+00:00
+[2021-06-15 17:51:10,212] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-15 17:51:25,215] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-15 17:51:26,506] {logging_mixin.py:104} WARNING - /home/***/.local/lib/python3.6/site-packages/pandas/io/sql.py:1423 UserWarning: The provided table name '21N_queue_cash_collected_multiple_queueid' is not found exactly as such in the database after writing the table, possibly due to case sensitivity issues. Consider using lower case table names.
+[2021-06-15 17:51:26,506] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-15 17:51:26,507] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-15 17:51:26,576] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=queue_cash_collected_multiple_queueid, execution_date=20210614T000000, start_date=20210615T175107, end_date=20210615T175126
+[2021-06-15 17:51:26,804] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-15 17:51:26,914] {local_task_job.py:151} INFO - Task exited with return code 0

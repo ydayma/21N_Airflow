@@ -1,0 +1,52 @@
+[2021-06-28 15:20:01,379] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.dealer_master 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:20:01,707] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.dealer_master 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:20:01,708] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:20:01,708] {taskinstance.py:1068} INFO - Starting attempt 1 of 4
+[2021-06-28 15:20:01,708] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:20:01,832] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): dealer_master> on 2021-06-26T23:45:00+00:00
+[2021-06-28 15:20:01,875] {standard_task_runner.py:52} INFO - Started process 300 to run task
+[2021-06-28 15:20:01,930] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'dealer_master', '2021-06-26T23:45:00+00:00', '--job-id', '273', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/analytics_summary.py', '--cfg-path', '/tmp/tmpxw887qxc', '--error-file', '/tmp/tmpg57q8g4g']
+[2021-06-28 15:20:01,945] {standard_task_runner.py:77} INFO - Job 273: Subtask dealer_master
+[2021-06-28 15:20:02,287] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.dealer_master 2021-06-26T23:45:00+00:00 [running]> on host 32c9461fc328
+[2021-06-28 15:20:02,881] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=dealer_master
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-26T23:45:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-26T23:45:00+00:00
+[2021-06-28 15:20:02,883] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-28 15:20:06,662] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-28 15:20:17,850] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-28 15:20:17,851] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-28 15:20:17,978] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=dealer_master, execution_date=20210626T234500, start_date=20210628T152001, end_date=20210628T152017
+[2021-06-28 15:20:18,182] {local_task_job.py:197} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2021-06-28 15:20:18,287] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-28 15:20:18,231] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 300
+[2021-06-28 15:20:18,308] {process_utils.py:66} INFO - Process psutil.Process(pid=300, status='terminated', exitcode=0, started='15:20:01') (300) terminated with exit code 0
+[2021-06-28 15:38:50,999] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.dealer_master 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:38:51,068] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.dealer_master 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:38:51,070] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:38:51,071] {taskinstance.py:1068} INFO - Starting attempt 1 of 4
+[2021-06-28 15:38:51,071] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:38:51,099] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): dealer_master> on 2021-06-26T23:45:00+00:00
+[2021-06-28 15:38:51,133] {standard_task_runner.py:52} INFO - Started process 336 to run task
+[2021-06-28 15:38:51,139] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'dealer_master', '2021-06-26T23:45:00+00:00', '--job-id', '308', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/analytics_summary.py', '--cfg-path', '/tmp/tmpp8vno46u', '--error-file', '/tmp/tmphcfp2kfs']
+[2021-06-28 15:38:51,146] {standard_task_runner.py:77} INFO - Job 308: Subtask dealer_master
+[2021-06-28 15:38:51,243] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.dealer_master 2021-06-26T23:45:00+00:00 [running]> on host 32c9461fc328
+[2021-06-28 15:38:51,417] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=dealer_master
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-26T23:45:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-26T23:45:00+00:00
+[2021-06-28 15:38:51,420] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-28 15:38:54,311] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-28 15:38:59,129] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-28 15:38:59,131] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-28 15:38:59,169] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=dealer_master, execution_date=20210626T234500, start_date=20210628T153851, end_date=20210628T153859
+[2021-06-28 15:38:59,252] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-28 15:38:59,279] {local_task_job.py:151} INFO - Task exited with return code 0

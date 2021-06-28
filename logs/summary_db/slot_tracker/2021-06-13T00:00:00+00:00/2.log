@@ -1,0 +1,195 @@
+[2021-06-14 12:55:04,685] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.slot_tracker 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:55:04,738] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.slot_tracker 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 12:55:04,738] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:55:04,738] {taskinstance.py:1068} INFO - Starting attempt 2 of 2
+[2021-06-14 12:55:04,738] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 12:55:04,762] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): slot_tracker> on 2021-06-13T00:00:00+00:00
+[2021-06-14 12:55:04,774] {standard_task_runner.py:52} INFO - Started process 720 to run task
+[2021-06-14 12:55:04,791] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'slot_tracker', '2021-06-13T00:00:00+00:00', '--job-id', '68', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpzrlkd7tw', '--error-file', '/tmp/tmpuupi5_us']
+[2021-06-14 12:55:04,792] {standard_task_runner.py:77} INFO - Job 68: Subtask slot_tracker
+[2021-06-14 12:55:04,882] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.slot_tracker 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 12:55:04,989] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=slot_tracker
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 12:55:04,991] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 12:55:08,218] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 12:55:08,229] {logging_mixin.py:104} WARNING - /home/***/.local/lib/python3.6/site-packages/pandas/core/generic.py:2615 UserWarning: the 'timedelta' type is not supported, and will be written as integer values (ns frequency) to the database.
+[2021-06-14 12:55:08,386] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 148, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 236, in executemany
+    self._get_db().encoding,
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 261, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1292, "Incorrect time value: '32400000000000' for column 'slot_hour' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 485, in slot_tracker
+    index=False)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/core/generic.py", line 2615, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 598, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1406, in to_sql
+    raise err
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1398, in to_sql
+    table.insert(chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 830, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 747, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 148, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 236, in executemany
+    self._get_db().encoding,
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 261, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (1292, "Incorrect time value: '32400000000000' for column 'slot_hour' at row 1")
+[SQL: INSERT INTO `21north`.`21N_slot_tracker` (id, creationdatetime, slot_hour, slot_count, cityid, queuetime, type_of_booking, total_slots, queueid) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)]
+[parameters: ((447285, datetime.datetime(2021, 6, 13, 18, 27, 29), 32400000000000, 4, 81, datetime.datetime(2021, 6, 14, 9, 0), 0, 5, 1635052), (447286, datetime.datetime(2021, 6, 13, 18, 35, 52), 32400000000000, 3, 81, datetime.datetime(2021, 6, 14, 9, 0), 0, 5, 1635053), (447287, datetime.datetime(2021, 6, 13, 18, 44, 23), 36000000000000, 7, 64, datetime.datetime(2021, 6, 14, 10, 0), 0, 11, 1635055), (447288, datetime.datetime(2021, 6, 13, 18, 47, 24), 32400000000000, 5, 174, datetime.datetime(2021, 6, 14, 9, 0), 0, 18, 1635056), (447289, datetime.datetime(2021, 6, 13, 18, 49, 4), 28800000000000, 26, 175, datetime.datetime(2021, 6, 14, 8, 0), 1, 26, 1635057), (447290, datetime.datetime(2021, 6, 13, 18, 51, 16), 50400000000000, 38, 147, datetime.datetime(2021, 6, 14, 14, 0), 0, 39, 1635058), (447291, datetime.datetime(2021, 6, 13, 18, 55, 11), 36000000000000, 25, 147, datetime.datetime(2021, 6, 14, 10, 0), 0, 39, 1635059), (447292, datetime.datetime(2021, 6, 13, 18, 57, 16), 25200000000000, 4, 45, datetime.datetime(2021, 6, 14, 7, 0), 0, 6, 1635060)  ... displaying 10 of 726 total bound parameter sets ...  (448009, datetime.datetime(2021, 6, 14, 14, 38, 59), 28800000000000, 28, 148, datetime.datetime(2021, 6, 15, 8, 0), 0, 68, 1635988), (448010, datetime.datetime(2021, 6, 14, 14, 39, 17), 36000000000000, 16, 68, datetime.datetime(2021, 6, 15, 10, 0), 0, 18, 1635989))]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+[2021-06-14 12:55:08,558] {taskinstance.py:1531} INFO - Marking task as FAILED. dag_id=summary_db, task_id=slot_tracker, execution_date=20210613T000000, start_date=20210614T125504, end_date=20210614T125508
+[2021-06-14 12:55:08,626] {local_task_job.py:151} INFO - Task exited with return code 1
+[2021-06-14 15:34:10,293] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.slot_tracker 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 15:34:10,333] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.slot_tracker 2021-06-13T00:00:00+00:00 [queued]>
+[2021-06-14 15:34:10,335] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 15:34:10,335] {taskinstance.py:1068} INFO - Starting attempt 2 of 2
+[2021-06-14 15:34:10,336] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-14 15:34:10,364] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): slot_tracker> on 2021-06-13T00:00:00+00:00
+[2021-06-14 15:34:10,380] {standard_task_runner.py:52} INFO - Started process 1118 to run task
+[2021-06-14 15:34:10,393] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'slot_tracker', '2021-06-13T00:00:00+00:00', '--job-id', '100', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpo6r666ea', '--error-file', '/tmp/tmp5zp4_q7g']
+[2021-06-14 15:34:10,394] {standard_task_runner.py:77} INFO - Job 100: Subtask slot_tracker
+[2021-06-14 15:34:10,492] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.slot_tracker 2021-06-13T00:00:00+00:00 [running]> on host 7874826b9cd7
+[2021-06-14 15:34:10,622] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=slot_tracker
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-13T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-13T00:00:00+00:00
+[2021-06-14 15:34:10,623] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-14 15:34:33,641] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-14 15:34:34,379] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 148, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 236, in executemany
+    self._get_db().encoding,
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 261, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1292, "Incorrect time value: '32400000000000' for column 'slot_hour' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/first_dag.py", line 488, in slot_tracker
+    dtype={"slot_hour": TIME()}
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/core/generic.py", line 2615, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 598, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1406, in to_sql
+    raise err
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 1398, in to_sql
+    table.insert(chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 830, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/sql.py", line 747, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 148, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 236, in executemany
+    self._get_db().encoding,
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 261, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (1292, "Incorrect time value: '32400000000000' for column 'slot_hour' at row 1")
+[SQL: INSERT INTO `21north`.`21N_slot_tracker` (id, creationdatetime, slot_hour, slot_count, cityid, queuetime, type_of_booking, total_slots, queueid) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)]
+[parameters: ((447317, datetime.datetime(2021, 6, 13, 21, 53, 23), 32400000000000, 9, 131, datetime.datetime(2021, 6, 14, 9, 0), 0, 27, 1635091), (447318, datetime.datetime(2021, 6, 13, 22, 7, 22), 36000000000000, 6, 53, datetime.datetime(2021, 6, 14, 10, 0), 0, 8, 1635092), (447319, datetime.datetime(2021, 6, 13, 22, 8, 51), 36000000000000, 5, 53, datetime.datetime(2021, 6, 14, 10, 0), 0, 8, 1635093), (447320, datetime.datetime(2021, 6, 13, 22, 15, 4), 28800000000000, 6, 53, datetime.datetime(2021, 6, 14, 8, 0), 0, 8, 1635094), (447321, datetime.datetime(2021, 6, 13, 22, 16, 12), 28800000000000, 5, 53, datetime.datetime(2021, 6, 14, 8, 0), 0, 8, 1635095), (447322, datetime.datetime(2021, 6, 13, 23, 17, 39), 36000000000000, 6, 53, datetime.datetime(2021, 6, 14, 10, 0), 0, 8, 1635097), (447323, datetime.datetime(2021, 6, 13, 23, 21, 56), 36000000000000, 5, 53, datetime.datetime(2021, 6, 14, 10, 0), 0, 8, 1635098), (447324, datetime.datetime(2021, 6, 13, 23, 27, 51), 43200000000000, 7, 53, datetime.datetime(2021, 6, 14, 12, 0), 0, 8, 1635099)  ... displaying 10 of 936 total bound parameter sets ...  (448251, datetime.datetime(2021, 6, 14, 16, 16, 58), 36000000000000, 8, 164, datetime.datetime(2021, 6, 15, 10, 0), 0, 15, 1636304), (448252, datetime.datetime(2021, 6, 14, 16, 16, 59), 64800000000000, 13, 84, datetime.datetime(2021, 6, 14, 18, 0), 1, 13, 1636305))]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+[2021-06-14 15:34:34,461] {taskinstance.py:1531} INFO - Marking task as FAILED. dag_id=summary_db, task_id=slot_tracker, execution_date=20210613T000000, start_date=20210614T153410, end_date=20210614T153434
+[2021-06-14 15:34:34,626] {local_task_job.py:151} INFO - Task exited with return code 1

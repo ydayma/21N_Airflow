@@ -1,0 +1,437 @@
+[2021-06-15 06:44:02,391] {scheduler_job.py:182} INFO - Started process (PID=37) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:44:02,413] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:44:02,414] {logging_mixin.py:104} INFO - [2021-06-15 06:44:02,414] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:44:02,417] {logging_mixin.py:104} INFO - [2021-06-15 06:44:02,416] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dag.py", line 16
+    REPLICA_DB_HOST = 3.0.136.197
+                            ^
+SyntaxError: invalid syntax
+[2021-06-15 06:44:02,418] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:44:02,471] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.103 seconds
+[2021-06-15 06:44:32,715] {scheduler_job.py:182} INFO - Started process (PID=94) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:44:32,717] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:44:32,718] {logging_mixin.py:104} INFO - [2021-06-15 06:44:32,718] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:44:32,722] {logging_mixin.py:104} INFO - [2021-06-15 06:44:32,721] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dag.py", line 16
+    REPLICA_DB_HOST = 3.0.136.197
+                            ^
+SyntaxError: invalid syntax
+[2021-06-15 06:44:32,723] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:44:32,776] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.065 seconds
+[2021-06-15 06:45:03,670] {scheduler_job.py:182} INFO - Started process (PID=169) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:45:03,673] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:45:03,674] {logging_mixin.py:104} INFO - [2021-06-15 06:45:03,674] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:45:03,678] {logging_mixin.py:104} INFO - [2021-06-15 06:45:03,677] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dag.py", line 16
+    REPLICA_DB_HOST = 3.0.136.197
+                            ^
+SyntaxError: invalid syntax
+[2021-06-15 06:45:03,679] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:45:03,710] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.048 seconds
+[2021-06-15 06:46:57,961] {scheduler_job.py:182} INFO - Started process (PID=40) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:46:57,962] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:46:57,983] {logging_mixin.py:104} INFO - [2021-06-15 06:46:57,983] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:46:57,986] {logging_mixin.py:104} INFO - [2021-06-15 06:46:57,985] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dag.py", line 16
+    REPLICA_DB_HOST = 3.0.136.197
+                            ^
+SyntaxError: invalid syntax
+[2021-06-15 06:46:57,988] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:46:58,203] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.247 seconds
+[2021-06-15 06:47:28,308] {scheduler_job.py:182} INFO - Started process (PID=90) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:47:28,312] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:47:28,313] {logging_mixin.py:104} INFO - [2021-06-15 06:47:28,313] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:47:28,316] {logging_mixin.py:104} INFO - [2021-06-15 06:47:28,314] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dag.py", line 16
+    REPLICA_DB_HOST = 3.0.136.197
+                            ^
+SyntaxError: invalid syntax
+[2021-06-15 06:47:28,323] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:47:28,386] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.081 seconds
+[2021-06-15 06:47:59,066] {scheduler_job.py:182} INFO - Started process (PID=162) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:47:59,068] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:47:59,069] {logging_mixin.py:104} INFO - [2021-06-15 06:47:59,069] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:47:59,071] {logging_mixin.py:104} INFO - [2021-06-15 06:47:59,070] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dag.py", line 16
+    REPLICA_DB_HOST = 3.0.136.197
+                            ^
+SyntaxError: invalid syntax
+[2021-06-15 06:47:59,071] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:47:59,100] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.039 seconds
+[2021-06-15 06:48:29,575] {scheduler_job.py:182} INFO - Started process (PID=223) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:48:29,578] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:48:29,580] {logging_mixin.py:104} INFO - [2021-06-15 06:48:29,579] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:48:29,582] {logging_mixin.py:104} INFO - [2021-06-15 06:48:29,581] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dag.py", line 16
+    REPLICA_DB_HOST = 3.0.136.197
+                            ^
+SyntaxError: invalid syntax
+[2021-06-15 06:48:29,583] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:48:29,603] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.034 seconds
+[2021-06-15 06:49:00,417] {scheduler_job.py:182} INFO - Started process (PID=297) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:49:00,421] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:49:00,423] {logging_mixin.py:104} INFO - [2021-06-15 06:49:00,422] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:49:00,429] {logging_mixin.py:104} INFO - [2021-06-15 06:49:00,428] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dag.py", line 16
+    REPLICA_DB_HOST = 3.0.136.197
+                            ^
+SyntaxError: invalid syntax
+[2021-06-15 06:49:00,430] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:49:00,460] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.066 seconds
+[2021-06-15 06:49:30,869] {scheduler_job.py:182} INFO - Started process (PID=357) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:49:30,871] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:49:30,873] {logging_mixin.py:104} INFO - [2021-06-15 06:49:30,873] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:49:30,878] {logging_mixin.py:104} INFO - [2021-06-15 06:49:30,876] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dag.py", line 16
+    REPLICA_DB_HOST = 3.0.136.197
+                            ^
+SyntaxError: invalid syntax
+[2021-06-15 06:49:30,880] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:49:30,945] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.086 seconds
+[2021-06-15 06:50:01,741] {scheduler_job.py:182} INFO - Started process (PID=429) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:50:01,753] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:50:01,755] {logging_mixin.py:104} INFO - [2021-06-15 06:50:01,755] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:50:01,765] {logging_mixin.py:104} INFO - [2021-06-15 06:50:01,759] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dag.py", line 16
+    REPLICA_DB_HOST = 3.0.136.197
+                            ^
+SyntaxError: invalid syntax
+[2021-06-15 06:50:01,767] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:50:01,817] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.091 seconds
+[2021-06-15 06:50:32,430] {scheduler_job.py:182} INFO - Started process (PID=498) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:50:32,432] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:50:32,433] {logging_mixin.py:104} INFO - [2021-06-15 06:50:32,433] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:50:32,436] {logging_mixin.py:104} INFO - [2021-06-15 06:50:32,435] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dag.py", line 16
+    REPLICA_DB_HOST = 3.0.136.197
+                            ^
+SyntaxError: invalid syntax
+[2021-06-15 06:50:32,437] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:50:32,469] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.044 seconds
+[2021-06-15 06:51:02,890] {scheduler_job.py:182} INFO - Started process (PID=561) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:51:02,893] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:51:02,893] {logging_mixin.py:104} INFO - [2021-06-15 06:51:02,893] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:51:02,905] {logging_mixin.py:104} INFO - [2021-06-15 06:51:02,904] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dag.py", line 16
+    REPLICA_DB_HOST = 3.0.136.197
+                            ^
+SyntaxError: invalid syntax
+[2021-06-15 06:51:02,906] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:51:02,939] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.059 seconds
+[2021-06-15 06:51:33,892] {scheduler_job.py:182} INFO - Started process (PID=631) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:51:33,893] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:51:33,894] {logging_mixin.py:104} INFO - [2021-06-15 06:51:33,894] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:51:34,342] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 06:51:36,197] {logging_mixin.py:104} INFO - [2021-06-15 06:51:36,197] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dag.py", line 17, in <module>
+    REPLICA_DB_USER = yantra
+NameError: name 'yantra' is not defined
+[2021-06-15 06:51:36,198] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:51:36,283] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 2.395 seconds
+[2021-06-15 06:52:07,096] {scheduler_job.py:182} INFO - Started process (PID=703) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:52:07,097] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:52:07,098] {logging_mixin.py:104} INFO - [2021-06-15 06:52:07,098] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:52:07,212] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 06:52:07,779] {logging_mixin.py:104} INFO - [2021-06-15 06:52:07,779] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dag.py", line 23, in <module>
+    LOCAL_DB_HOST = host.docker.internal
+NameError: name 'host' is not defined
+[2021-06-15 06:52:07,779] {scheduler_job.py:645} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:52:07,796] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.705 seconds
+[2021-06-15 06:52:38,596] {scheduler_job.py:182} INFO - Started process (PID=780) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:52:38,597] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:52:38,599] {logging_mixin.py:104} INFO - [2021-06-15 06:52:38,598] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:52:38,658] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 06:52:38,980] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:52:39,169] {logging_mixin.py:104} INFO - [2021-06-15 06:52:39,169] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 06:52:39,186] {logging_mixin.py:104} INFO - [2021-06-15 06:52:39,186] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-15 00:00:00+00:00
+[2021-06-15 06:52:39,205] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.612 seconds
+[2021-06-15 06:53:09,944] {scheduler_job.py:182} INFO - Started process (PID=843) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:53:09,945] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:53:09,946] {logging_mixin.py:104} INFO - [2021-06-15 06:53:09,946] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:53:10,033] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 06:53:10,481] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:53:10,773] {logging_mixin.py:104} INFO - [2021-06-15 06:53:10,773] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 06:53:10,786] {logging_mixin.py:104} INFO - [2021-06-15 06:53:10,785] {dag.py:1851} INFO - Creating ORM DAG for summary_db
+[2021-06-15 06:53:10,802] {logging_mixin.py:104} INFO - [2021-06-15 06:53:10,802] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-14 00:00:00+00:00
+[2021-06-15 06:53:10,822] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.883 seconds
+[2021-06-15 06:53:41,617] {scheduler_job.py:182} INFO - Started process (PID=919) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:53:41,627] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:53:41,631] {logging_mixin.py:104} INFO - [2021-06-15 06:53:41,630] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:53:41,740] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 06:53:42,052] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:53:42,069] {logging_mixin.py:104} INFO - [2021-06-15 06:53:42,069] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 06:53:42,084] {logging_mixin.py:104} INFO - [2021-06-15 06:53:42,084] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-15 00:00:00+00:00
+[2021-06-15 06:53:42,093] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.495 seconds
+[2021-06-15 06:54:13,110] {scheduler_job.py:182} INFO - Started process (PID=982) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:54:13,112] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:54:13,114] {logging_mixin.py:104} INFO - [2021-06-15 06:54:13,114] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:54:13,210] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 06:54:13,648] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:54:13,687] {logging_mixin.py:104} INFO - [2021-06-15 06:54:13,687] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 06:54:13,715] {logging_mixin.py:104} INFO - [2021-06-15 06:54:13,714] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-15 00:00:00+00:00
+[2021-06-15 06:54:13,730] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.634 seconds
+[2021-06-15 06:54:44,458] {scheduler_job.py:182} INFO - Started process (PID=1052) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:54:44,459] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:54:44,460] {logging_mixin.py:104} INFO - [2021-06-15 06:54:44,460] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:54:44,550] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 06:54:45,260] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:54:45,885] {logging_mixin.py:104} INFO - [2021-06-15 06:54:45,884] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 06:54:45,914] {logging_mixin.py:104} INFO - [2021-06-15 06:54:45,914] {dag.py:1851} INFO - Creating ORM DAG for summary_db
+[2021-06-15 06:54:45,930] {logging_mixin.py:104} INFO - [2021-06-15 06:54:45,929] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-14 00:00:00+00:00
+[2021-06-15 06:54:46,033] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 1.579 seconds
+[2021-06-15 06:55:16,195] {scheduler_job.py:182} INFO - Started process (PID=1118) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:55:16,197] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:55:16,198] {logging_mixin.py:104} INFO - [2021-06-15 06:55:16,198] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:55:16,312] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 06:55:16,764] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:55:16,786] {logging_mixin.py:104} INFO - [2021-06-15 06:55:16,786] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 06:55:16,814] {logging_mixin.py:104} INFO - [2021-06-15 06:55:16,813] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-14 00:00:00+00:00
+[2021-06-15 06:55:16,828] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.638 seconds
+[2021-06-15 06:55:47,675] {scheduler_job.py:182} INFO - Started process (PID=1178) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:55:47,679] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:55:47,683] {logging_mixin.py:104} INFO - [2021-06-15 06:55:47,682] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:55:47,765] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 06:55:48,150] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:55:48,167] {logging_mixin.py:104} INFO - [2021-06-15 06:55:48,166] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 06:55:48,185] {logging_mixin.py:104} INFO - [2021-06-15 06:55:48,185] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-15 00:00:00+00:00
+[2021-06-15 06:55:48,194] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.536 seconds
+[2021-06-15 06:56:18,380] {scheduler_job.py:182} INFO - Started process (PID=1251) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:56:18,384] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:56:18,387] {logging_mixin.py:104} INFO - [2021-06-15 06:56:18,386] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:56:18,466] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 06:56:18,815] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:56:19,020] {logging_mixin.py:104} INFO - [2021-06-15 06:56:19,020] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 06:56:19,028] {logging_mixin.py:104} INFO - [2021-06-15 06:56:19,028] {dag.py:1851} INFO - Creating ORM DAG for summary_db
+[2021-06-15 06:56:19,038] {logging_mixin.py:104} INFO - [2021-06-15 06:56:19,038] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-14 00:00:00+00:00
+[2021-06-15 06:56:19,053] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.680 seconds
+[2021-06-15 06:56:49,731] {scheduler_job.py:182} INFO - Started process (PID=1312) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:56:49,738] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:56:49,739] {logging_mixin.py:104} INFO - [2021-06-15 06:56:49,739] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:56:49,829] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 06:56:50,306] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:56:50,332] {logging_mixin.py:104} INFO - [2021-06-15 06:56:50,332] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 06:56:50,355] {logging_mixin.py:104} INFO - [2021-06-15 06:56:50,355] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-15 00:00:00+00:00
+[2021-06-15 06:56:50,387] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.660 seconds
+[2021-06-15 06:57:20,789] {scheduler_job.py:182} INFO - Started process (PID=1384) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:57:20,791] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:57:20,793] {logging_mixin.py:104} INFO - [2021-06-15 06:57:20,792] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:57:20,866] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 06:57:21,250] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:57:21,269] {logging_mixin.py:104} INFO - [2021-06-15 06:57:21,269] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 06:57:21,287] {logging_mixin.py:104} INFO - [2021-06-15 06:57:21,287] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-15 00:00:00+00:00
+[2021-06-15 06:57:21,306] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.525 seconds
+[2021-06-15 06:57:51,416] {scheduler_job.py:182} INFO - Started process (PID=1444) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 06:57:51,420] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 06:57:51,424] {logging_mixin.py:104} INFO - [2021-06-15 06:57:51,423] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:57:51,509] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 06:57:51,954] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 06:57:51,975] {logging_mixin.py:104} INFO - [2021-06-15 06:57:51,975] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 06:57:51,995] {logging_mixin.py:104} INFO - [2021-06-15 06:57:51,995] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-15 00:00:00+00:00
+[2021-06-15 06:57:52,005] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.598 seconds
+[2021-06-15 10:57:42,542] {scheduler_job.py:182} INFO - Started process (PID=29) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 10:57:42,552] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 10:57:42,552] {logging_mixin.py:104} INFO - [2021-06-15 10:57:42,552] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 10:57:42,823] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 10:57:44,293] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 10:57:44,360] {logging_mixin.py:104} INFO - [2021-06-15 10:57:44,360] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 10:57:44,430] {logging_mixin.py:104} INFO - [2021-06-15 10:57:44,430] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-15 00:00:00+00:00
+[2021-06-15 10:57:44,454] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 1.934 seconds
+[2021-06-15 10:58:15,352] {scheduler_job.py:182} INFO - Started process (PID=102) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 10:58:15,353] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 10:58:15,354] {logging_mixin.py:104} INFO - [2021-06-15 10:58:15,353] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 10:58:15,498] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 10:58:16,692] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 10:58:16,797] {logging_mixin.py:104} INFO - [2021-06-15 10:58:16,797] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 10:58:16,847] {logging_mixin.py:104} INFO - [2021-06-15 10:58:16,847] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-15 00:00:00+00:00
+[2021-06-15 10:58:16,865] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 1.536 seconds
+[2021-06-15 10:58:47,001] {scheduler_job.py:182} INFO - Started process (PID=166) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 10:58:47,002] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 10:58:47,003] {logging_mixin.py:104} INFO - [2021-06-15 10:58:47,002] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 10:58:47,119] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 10:58:47,772] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 10:58:47,799] {logging_mixin.py:104} INFO - [2021-06-15 10:58:47,799] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 10:58:47,838] {logging_mixin.py:104} INFO - [2021-06-15 10:58:47,838] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-15 00:00:00+00:00
+[2021-06-15 10:58:47,867] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.870 seconds
+[2021-06-15 10:59:18,013] {scheduler_job.py:182} INFO - Started process (PID=241) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 10:59:18,014] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 10:59:18,015] {logging_mixin.py:104} INFO - [2021-06-15 10:59:18,015] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 10:59:18,119] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 10:59:18,751] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 10:59:18,780] {logging_mixin.py:104} INFO - [2021-06-15 10:59:18,779] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 10:59:18,808] {logging_mixin.py:104} INFO - [2021-06-15 10:59:18,807] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-15 00:00:00+00:00
+[2021-06-15 10:59:18,819] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.811 seconds
+[2021-06-15 10:59:48,915] {scheduler_job.py:182} INFO - Started process (PID=306) to work on /opt/airflow/dags/test_dag.py
+[2021-06-15 10:59:48,920] {scheduler_job.py:633} INFO - Processing file /opt/airflow/dags/test_dag.py for tasks to queue
+[2021-06-15 10:59:48,921] {logging_mixin.py:104} INFO - [2021-06-15 10:59:48,921] {dagbag.py:487} INFO - Filling up the DagBag from /opt/airflow/dags/test_dag.py
+[2021-06-15 10:59:49,046] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/providers/mysql/operators/mysql.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-06-15 10:59:49,545] {scheduler_job.py:643} INFO - DAG(s) dict_keys(['summary_db']) retrieved from /opt/airflow/dags/test_dag.py
+[2021-06-15 10:59:49,566] {logging_mixin.py:104} INFO - [2021-06-15 10:59:49,566] {dag.py:1832} INFO - Sync 1 DAGs
+[2021-06-15 10:59:49,587] {logging_mixin.py:104} INFO - [2021-06-15 10:59:49,587] {dag.py:2305} INFO - Setting next_dagrun for summary_db to 2021-06-15 00:00:00+00:00
+[2021-06-15 10:59:49,599] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/test_dag.py took 0.692 seconds

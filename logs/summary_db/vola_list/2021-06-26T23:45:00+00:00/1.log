@@ -1,0 +1,50 @@
+[2021-06-28 15:20:21,933] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.vola_list 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:20:22,312] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.vola_list 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:20:22,313] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:20:22,313] {taskinstance.py:1068} INFO - Starting attempt 1 of 4
+[2021-06-28 15:20:22,313] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:20:22,477] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): vola_list> on 2021-06-26T23:45:00+00:00
+[2021-06-28 15:20:22,515] {standard_task_runner.py:52} INFO - Started process 339 to run task
+[2021-06-28 15:20:22,541] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'vola_list', '2021-06-26T23:45:00+00:00', '--job-id', '289', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/analytics_summary.py', '--cfg-path', '/tmp/tmp0aee8spq', '--error-file', '/tmp/tmp3feb98dw']
+[2021-06-28 15:20:22,542] {standard_task_runner.py:77} INFO - Job 289: Subtask vola_list
+[2021-06-28 15:20:22,790] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.vola_list 2021-06-26T23:45:00+00:00 [running]> on host 32c9461fc328
+[2021-06-28 15:20:23,295] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=vola_list
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-26T23:45:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-26T23:45:00+00:00
+[2021-06-28 15:20:23,330] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-28 15:20:24,851] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-28 15:20:26,541] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-28 15:20:26,541] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-28 15:20:26,581] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=vola_list, execution_date=20210626T234500, start_date=20210628T152021, end_date=20210628T152026
+[2021-06-28 15:20:26,939] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-28 15:20:27,046] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-06-28 15:40:02,461] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.vola_list 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:40:02,487] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: summary_db.vola_list 2021-06-26T23:45:00+00:00 [queued]>
+[2021-06-28 15:40:02,488] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:40:02,488] {taskinstance.py:1068} INFO - Starting attempt 1 of 4
+[2021-06-28 15:40:02,488] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-06-28 15:40:02,499] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): vola_list> on 2021-06-26T23:45:00+00:00
+[2021-06-28 15:40:02,507] {standard_task_runner.py:52} INFO - Started process 439 to run task
+[2021-06-28 15:40:02,512] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'summary_db', 'vola_list', '2021-06-26T23:45:00+00:00', '--job-id', '322', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/analytics_summary.py', '--cfg-path', '/tmp/tmp1coh5sdh', '--error-file', '/tmp/tmp029woedy']
+[2021-06-28 15:40:02,513] {standard_task_runner.py:77} INFO - Job 322: Subtask vola_list
+[2021-06-28 15:40:02,567] {logging_mixin.py:104} INFO - Running <TaskInstance: summary_db.vola_list 2021-06-26T23:45:00+00:00 [running]> on host 32c9461fc328
+[2021-06-28 15:40:02,629] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=summary_db
+AIRFLOW_CTX_TASK_ID=vola_list
+AIRFLOW_CTX_EXECUTION_DATE=2021-06-26T23:45:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-06-26T23:45:00+00:00
+[2021-06-28 15:40:02,630] {logging_mixin.py:104} INFO - ------------------------------------Inside Function-----------------------------
+[2021-06-28 15:40:04,380] {logging_mixin.py:104} INFO - -------------------------------Data read into dataframe---------------------------
+[2021-06-28 15:40:11,242] {logging_mixin.py:104} INFO - ----------------------------------Data written into summary DB----------------------
+[2021-06-28 15:40:11,242] {python.py:151} INFO - Done. Returned value was: None
+[2021-06-28 15:40:11,260] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=summary_db, task_id=vola_list, execution_date=20210626T234500, start_date=20210628T154002, end_date=20210628T154011
+[2021-06-28 15:40:11,304] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-06-28 15:40:11,344] {local_task_job.py:151} INFO - Task exited with return code 0
